@@ -321,3 +321,74 @@ main.container {
         scroll-margin-top: 120px; /* Larger offset for taller mobile navbar */
     }
 }
+
+/* style.cssの一番下に追加してください */
+
+/* --- ハンバーガーメニューのためのスタイル --- */
+
+/* ハンバーガーアイコンのボタン */
+.navbar-toggler {
+    display: none; /* デスクトップでは非表示 */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* --- レスポンシブデザイン (モバイル表示の調整) --- */
+@media (max-width: 768px) {
+    /* Navbarのコンテナ調整 */
+    .navbar .container {
+        flex-wrap: wrap; /* コンテナ内で折り返しを許可 */
+        justify-content: space-between;
+    }
+
+    /* ハンバーガーアイコンを表示 */
+    .navbar-toggler {
+        display: block;
+    }
+
+    /* ナビゲーションリンクのスタイル */
+    .navbar-links {
+        display: none; /* デフォルトでメニューを非表示に */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        background-color: var(--surface-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border: 1px solid var(--border-color);
+    }
+    
+    /* JavaScriptでis-activeクラスが付いたときにメニューを表示 */
+    .navbar-links.is-active {
+        display: flex;
+    }
+
+    .navbar-links a {
+        padding: 15px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        margin-left: 0;
+    }
+
+    .navbar-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* Aboutセクションの調整 */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-name {
+        font-size: 1.75rem;
+    }
+    
+    /* スクロール位置のオフセット調整 */
+    section {
+        scroll-margin-top: 75px; /* Navbarの高さ分 */
+    }
+}

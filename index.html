@@ -10,19 +10,24 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Seiji MAEKAWA</a>
-            <div class="navbar-links">
-                <a href="#aboutme">About</a>
-                <a href="#research">Research</a>
-                <a href="#experiences">Experiences</a>
-                <a href="#publications">Publications</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-            </div>
+  <nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">Seiji MAEKAWA</a>
+        
+        <button class="navbar-toggler" id="navbar-toggler" aria-label="ナビゲーションを開閉する">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="navbar-links" id="navbar-links">
+            <a href="#aboutme">About</a>
+            <a href="#research">Research</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main class="container">
 
@@ -244,26 +249,41 @@
     <footer class="footer">
         <p id="last-modified">Last modified: </p>
         <p>© 2025 Seiji Maekawa. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-      (function() {
-        // idを持つHTML要素を取得
-        const lastModifiedElement = document.getElementById('last-modified');
-        if (lastModifiedElement) {
-          // ブラウザが提供するドキュメントの最終更新日を取得
-          const lastModifiedDate = new Date(document.lastModified);
-
-          // 日付を「YYYY/MM/DD」形式に整形
-          const year = lastModifiedDate.getFullYear();
-          const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
-          const day = String(lastModifiedDate.getDate()).padStart(2, '0');
-          const formattedDate = `${year}/${month}/${day}`;
-          
-          // 整形した日付をHTML要素に表示
-          lastModifiedElement.textContent += formattedDate;
-        }
-      })();
-    </script>
-    </body>
-</html>
+      </footer>
+  
+      <script>
+        // --- Last Modified Date Script ---
+        (function() {
+          const lastModifiedElement = document.getElementById('last-modified');
+          if (lastModifiedElement) {
+            const lastModifiedDate = new Date(document.lastModified);
+            const year = lastModifiedDate.getFullYear();
+            const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
+            const day = String(lastModifiedDate.getDate()).padStart(2, '0');
+            const formattedDate = `${year}/${month}/${day}`;
+            lastModifiedElement.textContent += formattedDate;
+          }
+        })();
+  
+        // --- Hamburger Menu Script (ここから新規追加) ---
+        (function() {
+          const toggler = document.getElementById('navbar-toggler');
+          const menu = document.getElementById('navbar-links');
+          const menuLinks = menu.querySelectorAll('a');
+  
+          // トグルボタンがクリックされたらメニューの表示/非表示を切り替え
+          toggler.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+          });
+  
+          // メニュー内のリンクがクリックされたらメニューを閉じる
+          menuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+              menu.classList.remove('is-active');
+            });
+          });
+        })();
+      </script>
+  
+  </body>
+  </html>
