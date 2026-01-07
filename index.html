@@ -4,85 +4,115 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seiji MAEKAWA - Research Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Elegant Serif for Headlines, Clean Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="#">Seiji MAEKAWA</a>
-        
-        <button class="navbar-toggler" id="navbar-toggler" aria-label="ナビゲーションを開閉する">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="navbar-links" id="navbar-links">
-            <a href="#aboutme">About</a>
-            <a href="#research">Research</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#publications">Publications</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-        </div>
-    </div>
-</nav>
-
-    <main class="container">
-
-        <section id="aboutme" class="about-section">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+<div class="layout-wrapper">
+    <!-- Sidebar / Hero Area Combined -->
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+            <div class="profile-header">
                 <img class="profile-picture" src="seiji_hp_wide.jpg" alt="Seiji Maekawa"/>
-                <div class="about-text">
-                    <h1 class="about-name">Seiji MAEKAWA <br> (前川 政司) </h1>
-                    <p>
-                        <strong>Research Scientist @ <a href="https://megagon.ai/">Megagon Labs</a>, California, USA</strong><br>
-                        Ph.D. (Information Science and Technology)
-                    </p>
-                    <p>Email: seiji [at] megagon.ai</p>
-                    <div class="social-links">
-                        <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                        <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </div>
+                <h1 class="about-name">Seiji MAEKAWA <br> <span class="jp-name">(前川 政司)</span></h1>
+                <p class="current-position">
+                    Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>
+                    Mountain View, CA
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <!-- <a href="mailto:seiji@megagon.ai" aria-label="Email"><i class="fas fa-envelope"></i></a> -->
+                </div>
+                <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                   seiji [at] megagon.ai
                 </div>
             </div>
+
+            <nav class="sidebar-nav">
+                <ul> <!-- Removed href='#' to avoid jump to top, smooth scroll handled by css -->
+                    <li><a href="index.html#about">About</a></li> <!-- Added About ID -->
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="index.html#experiences">Experiences</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="index.html#awards">Awards</a></li> <!-- Added Awards link -->
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                </ul>
+            </nav>
+
+            <footer class="sidebar-footer">
+                <p>© 2025 Seiji Maekawa.</p>
+                <p id="last-modified" class="last-mod">Last modified: </p>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- Mobile Header (Visible only on small screens) -->
+    <header class="mobile-header">
+        <div class="container">
+            <a class="mobile-brand" href="#">S. Maekawa</a>
+            <button class="mobile-menu-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <section id="about" class="intro-section">
+            <h2 class="section-title">About Me</h2>
+            <p class="intro-text">
+                I am a Research Scientist at <strong>Megagon Labs</strong> in Mountain View, California. 
+                I hold a Ph.D. in Information Science and Technology from Osaka University.
+                My research passion lies at the intersection of <strong>Natural Language Processing</strong>, <strong>Graph Neural Networks</strong>, and <strong>Machine Learning</strong>.
+            </p>
+            <p class="intro-text">
+                Currently, I am focusing on making Large Language Models (LLMs) more reliable and capable through function calling, retrieval augmentation, and long-context understanding.
+            </p>
         </section>
 
         <section id="research">
             <h2 class="section-title">Research Interests</h2>
             <div class="interests-grid">
                 <div class="interest-card">
-                    <h3>Natural Language Processing</h3>
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>NLP & LLMs</h3>
                     <ul>
-                        <li>Function Calling in LLMs</li>
-                        <li>Long-context Language Models</li>
-                        <li>Retrieval-augmented Language Models</li>
+                        <li>Function Calling & Tool Use</li>
+                        <li>Long-context Understanding</li>
+                        <li>RAG (Retrieval-Augmented Generation)</li>
                         <li>Active Learning</li>
                     </ul>
                 </div>
                 <div class="interest-card">
+                    <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
                     <h3>Graph Processing</h3>
                     <ul>
-                        <li>Graph Neural Networks</li>
+                        <li>Graph Neural Networks (GNNs)</li>
                         <li>Synthetic Graph Generation</li>
                         <li>Attributed Graph Clustering</li>
                     </ul>
                 </div>
                 <div class="interest-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
                     <h3>Social Network Analysis</h3>
                     <ul>
-                        <li>Follower Prediction</li>
-                        <li>Graph Analysis on Incomplete Networks</li>
+                        <li>Follower Prediction / Link Prediction</li>
+                        <li>Analysis on Incomplete Networks</li>
                     </ul>
                 </div>
                  <div class="interest-card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
                     <h3>Graph Database</h3>
                     <ul>
                         <li>Language-aware Indexing</li>
-                        <li>Query Language</li>
+                        <li>Query Languages</li>
                     </ul>
                 </div>
             </div>
@@ -92,118 +122,193 @@
             <h2 class="section-title">Experiences</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Research Scientist</h3>
-                    <p><strong><a href="https://megagon.ai/">Megagon Labs Inc.</a></strong> / Mountain View, CA, USA<br>2024-04 ~ present</p>
+                    <span class="date">2024.04 - Present</span>
+                    <div class="content">
+                        <h3>Research Scientist</h3>
+                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Research Associate</h3>
-                    <p><strong><a href="https://megagon.ai/">Megagon Labs Inc.</a></strong> / Mountain View, CA, USA<br>2023-04 ~ 2024-03</p>
+                    <span class="date">2023.04 - 2024.03</span>
+                    <div class="content">
+                        <h3>Research Associate</h3>
+                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Research Intern</h3>
-                    <p><strong><a href="https://megagon.ai/">Megagon Labs Inc.</a></strong> / Mountain View, CA, USA<br>2022-01 ~ 2022-04<br><em>Low-budget active learning. Aiming to reduce labeling costs (i.e., human effort) by focusing on informative data samples to train language models. <a href="https://megagon.ai/megagon-labs-spring-2022-internship-experience/">Blog post</a></em></p>
+                    <span class="date">2022.01 - 2022.04</span>
+                    <div class="content">
+                        <h3>Research Intern</h3>
+                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
+                        <p class="desc">Working on Low-budget active learning to reduce labeling costs.</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Research Intern</h3>
-                    <p><strong>Hotto Link Inc. - <a href="https://www.hottolink.co.jp/">株式会社ホットリンク</a></strong> / Remote<br>2020-09 ~ 2020-10<br><em>Follower prediction problem under the restriction of the small number of API calls. <a href="https://www.hottolink.co.jp/info/20220207_111298/">This work was press-released!</a></em></p>
+                    <span class="date">2020.09 - 2020.10</span>
+                    <div class="content">
+                        <h3>Research Intern</h3>
+                        <p><strong>Hotto Link Inc.</strong>, Remote</p>
+                        <p class="desc">Follower prediction with limited API calls.</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Specially Appointed Researcher/Fellow (Part time)</h3>
-                    <p><strong>Osaka University</strong><br>2020-04 ~ 2023-03</p>
+                    <span class="date">2020.04 - 2023.03</span>
+                    <div class="content">
+                        <h3>Specially Appointed Researcher</h3>
+                        <p><strong>Osaka University</strong>, Osaka, Japan</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Sales Enginner (Full-time)</h3>
-                    <p><strong>NTT DOCOMO, INC.</strong><br>2019-04 ~ 2020-03</p>
+                    <span class="date">2019.04 - 2020.03</span>
+                    <div class="content">
+                        <h3>Sales Engineer</h3>
+                        <p><strong>NTT DOCOMO, INC.</strong>, Tokyo, Japan</p>
+                    </div>
                 </div>
                  <div class="timeline-item">
-                    <h3>Study Abroad - Guest Student</h3>
-                    <p><strong>Eindhoven University of Technology</strong> / Eindhoven, Netherlands<br>2018-10 ~ 2018-12</p>
+                    <span class="date">2018.10 - 2018.12</span>
+                    <div class="content">
+                        <h3>Guest Student</h3>
+                        <p><strong>Eindhoven University of Technology</strong>, Netherlands</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Study Abroad - Exchange Student</h3>
-                    <p><strong>The Chinese University of Hong Kong</strong> / Hong Kong<br>2017-09 (30 days)</p>
+                    <span class="date">2017.09</span>
+                    <div class="content">
+                        <h3>Exchange Student</h3>
+                        <p><strong>The Chinese University of Hong Kong</strong>, Hong Kong</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="publications">
-            <h2 class="section-title">Publications</h2>
-
-            <h3>Preprint</h3>
-             <div class="publication-list">
-                <div class="publication-item"><p><strong>Towards Reliable Benchmarking: A Contamination Free, Controllable Evaluation Framework for Multi-step LLM Function Calling</strong>. [<a href="https://arxiv.org/abs/2509.26553">paper</a>]<br> <u>Seiji Maekawa</u>, Jackson Hassell, Pouya Pezeshkpour, Tom Mitchell, Estevam Hruschka. <br> in <em> arXiv preprint</em>, Sep. 2025.</p></div>                
-                <div class="publication-item"><p><strong>Same Content, Different Representations: A Controlled Study for Table QA</strong>. [<a href="https://arxiv.org/abs/2509.22983">paper</a>]<br> Yue Zhang, <u>Seiji Maekawa</u>, Nikita Bhutani. <br> in <em> arXiv preprint</em>, Sep. 2025.</p></div>                
-                <div class="publication-item"><p><strong>The Rarity Blind Spot: A Framework for Evaluating Statistical Reasoning in LLMs</strong>. [<a href="https://arxiv.org/abs/2509.00245">paper</a>] [<a href="https://github.com/megagonlabs/DiFBench">code</a>] <br> <u>Seiji Maekawa</u>, Hayate Iso, Nikita Bhutani. <br> in <em> arXiv preprint</em>, Aug. 2025.</p></div>
-                <div class="publication-item"><p><strong>A Simple and Scalable Graph Neural Network for Large Directed Graphs</strong>. [<a href="https://arxiv.org/abs/2306.08274">paper</a>] [<a href="https://github.com/seijimaekawa/A2DUG">code</a>] <br> <u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka. <br> in <em>arXiv preprint</em>, June 2023.</p></div>
-            </div>
-            
-            <h3>International Conferences/Workshops</h3>
-            <div class="publication-list">
-                <div class="publication-item"><p><strong>Efficient Context Selection for Long-Context QA: No Tuning, No Iteration, Just Adaptive-k</strong>. [<a href="https://arxiv.org/abs/2506.08479">paper</a>] [<a href="https://github.com/megagonlabs/adaptive-k-retrieval">code</a>] <br> Chihiro Taguchi, <u>Seiji Maekawa</u>, Nikita Bhutani <br> in <em>the 2025 Conference on Empirical Methods in Natural Language Processing (ENMLP) [oral presentation]</em>, to be presented in Nov. 2025.</p></div>
-                <div class="publication-item"><p><strong>Holistic Reasoning with Long-Context LMs: A Benchmark for Database Operations on Massive Textual Data</strong>. [<a href="https://arxiv.org/abs/2410.11996">paper</a>] [<a href="https://github.com/megagonlabs/holobench">code</a>] [<a href="https://huggingface.co/datasets/megagonlabs/holobench">data</a>] <br> <u>Seiji Maekawa<sup>*</sup></u>, Hayate Iso<sup>*</sup>, Nikita Bhutani. <br> in <em> International Conference on Learning Representations (ICLR)</em>, Apr 2025.</p></div>
-                <div class="publication-item"><p><strong>From Single to Multi: How LLMs Hallucinate in Multi-Document Summarization</strong>. [<a href="https://arxiv.org/abs/2410.13961">paper</a>] <br> Catarina G. Belem, Pouya Pezeskhpour, Hayate Iso, <u>Seiji Maekawa</u>, Nikita Bhutani, Estevam Hruschka. <br> in <em> Findings of 2025 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</em>, 2025.</p></div>
-                <div class="publication-item"><p><strong>Retrieval Helps or Hurts? A Deeper Dive into the Efficacy of Retrieval Augmentation to Language Models</strong>. [<a href="https://arxiv.org/abs/2402.13492">paper</a>] [<a href="https://github.com/seijimaekawa/seijimaekawa.github.io/blob/test/files/WiTQA_poster.pdf">poster</a>] [<a href="https://github.com/megagonlabs/witqa">code</a>] <br> <u>Seiji Maekawa</u>, Hayate Iso,  Sairam Gurajada, Nikita Bhutani. <br> in <em>2024 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL) [oral presentation], acceptance rate: 23.2% (=565/2434)</em>, Jun. 2024.</p></div>
-                <div class="publication-item"><p><strong>Low-resource Interactive Active Labeling for Fine-tuning Language Models</strong>. [<a href="https://aclanthology.org/2022.findings-emnlp.235/">paper</a>] [<a href="https://github.com/megagonlabs/Tyrogue">code</a>] <br> <u>Seiji Maekawa</u>, Dan Zhang, Hannah Kim, Sajjadur Rahman and Estevam Hruschka. <br> in <em>Findings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, Dec. 2022.</p></div>
-                <div class="publication-item"><p><strong>Beyond Real-world Benchmark Datasets: An Empirical Study of Node Classification with GNNs</strong>. [<a href="https://openreview.net/forum?id=bSULxOy3On">paper</a>] [<a href="https://github.com/seijimaekawa/empirical-study-of-GNNs">code</a>] <br> <u>Seiji Maekawa</u>, Koki Noda, Yuya Sasaki, Makoto Onizuka. <br> in <em>Proceedings of the NeurIPS Datasets and Benchmarks Track</em>, Nov. 2022.</p></div>
-                <div class="publication-item"><p><strong>GNN Transformation Framework for Improving Efficiency and Scalability</strong>. [<a href="https://arxiv.org/abs/2207.12000">paper</a>] [<a href="https://github.com/seijimaekawa/LCtransformation">code</a>] <br> <u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka. <br> in <em>Proceedings of The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML/PKDD)</em>, Sep. 2022.</p></div>
-                <div class="publication-item"><p><strong>Benchmarking GNNs with GenCAT Workbench</strong>. [<a href="https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_1444.pdf">paper</a>] [<a href="https://github.com/seijimaekawa/GenCAT/tree/main/GenCAT_Workbench">code</a>] [<a href="https://www.youtube.com/watch?v=28xVOHRDpCE">demo video</a>] <br> <u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka. <br> in <em>Demo track of ECML/PKDD</em>, Sep. 2022.</p></div>
-                <div class="publication-item"><p><strong>Effective Candidate Selection and Interpretable Interest Extraction for Follower Prediction on Social Media</strong>. [<a href="https://dl.acm.org/doi/fullHtml/10.1145/3486622.3493954">paper</a>]<br> <u>Seiji Maekawa</u>, Santi Saeyor, Takeshi Sakaki, Makoto Onizuka, <br> in <em>Proceedings of IEEE/WIC/ACM International Conference on Web Intelligence (WI-IAT)</em>, December 2021. </p></div>
-                <div class="publication-item"><p><strong>Adaptive Node Embedding Propagation for Semi-Supervised Classification</strong>. [<a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_662.pdf">paper</a>] <br> Yuya Ogawa, <u>Seiji Maekawa</u>, Yuya Sasaki, Yasuhiro Fujiwara, Makoto Onizuka. <br> in <em>Proceedings of The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML/PKDD)</em>, Sep. 2021. </p></div>
-                <div class="publication-item"><p><strong>Controlling Internal Structure of Communities on Graph Generator</strong>. [<a href="https://www.computer.org/csdl/proceedings-article/asonam/2020/09381439/1semypsPsFq">paper</a>] <br> Hiroto Yamaguchi, Yuya Ogawa, <u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka. <br> in <em>Proceedings of 2020 IEEE/ACM ASONAM Demos and Exhibitions Track</em>, Dec. 2020.</p></div>
-                <div class="publication-item"><p><strong>General Generator for Attributed Graphs with Community Structure</strong>. [<a href="https://gem-ecmlpkdd.github.io/archive/2019/papers/">paper</a>] [<a href="https://github.com/seijimaekawa/acMark">code</a>] <br> <u>Seiji Maekawa</u>, Jianpeng Zhang, George Fletcher, Makoto Onizuka. <br> in <em>Proceedings of the ECML/PKDD Graph Embedding and Mining Workshop</em>, Sep. 2019. </p></div>
+            <h2 class="section-title">Selected Publications</h2>
+            <div style="margin-bottom: 2rem;">
+            <a href="publications.html" style="font-weight: 700; text-decoration: underline;">View Full Publication List &rarr;</a>
             </div>
 
-            <h3>Journal Papers</h3>
-             <div class="publication-list">
-                <div class="publication-item"><p><strong>GenCAT: Generating Attributed Graphs with Controlled Relationships between Classes, Attributes, and Topology</strong>. [<a href="https://arxiv.org/abs/2109.04639">paper</a>] [<a href="https://github.com/seijimaekawa/GenCAT">code</a>]<br> <u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka. <br> <em>Information Systems</em>, Feb. 2023. </p></div>
-                <div class="publication-item"><p><strong>New Attributed Graph Clustering by Bridging Attribute and Topology Spaces</strong>. [<a href="https://www.jstage.jst.go.jp/article/ipsjjip/28/0/28_427/_article/-char/ja/">paper</a>] [<a href="https://github.com/seijimaekawa/NAGC">code</a>] <br> <u>Seiji Maekawa</u>, Koh Takeuchi, Makoto Onizuka. <br> <em>Information Processing Society of Japan</em>, Aug. 2020. </p></div>
-            </div>
+            <div class="pub-category">
+                <h3>Selected Works</h3>
+                <div class="publication-list">
+                    <!-- 2025 -->
+                    <div class="publication-item">
+                        <div class="pub-title">Towards Reliable Benchmarking: A Contamination Free, Controllable Evaluation Framework for Multi-step LLM Function Calling</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Jackson Hassell, Pouya Pezeshkpour, Tom Mitchell, Estevam Hruschka</div>
+                        <div class="pub-venue">arXiv preprint, Sep. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.26553" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
 
-            <h3>Domestic Conferences/Others - 国内会議・研究会等</h3>
-            <div class="publication-list">
-                <div class="publication-item"><p><strong>多様な人工グラフを用いた GNN によるノード分類の実証研究</strong>. <br> <u>前川 政司</u>, 野田 昂希, 佐々木 勇和, 鬼塚 真. <br> <em>第15回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2023）</em>, Mar. 2023.</p></div>
-                <div class="publication-item"><p><strong>コミュニティ構造を制御可能な属性付きグラフ生成</strong>. [<a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/6B-02.html">abstract</a>] <br> <u>前川 政司</u>, 佐々木 勇和, George Fletcher, 鬼塚 真. <br> <em>情報処理学会第83回全国大会（IPSJ 2021）</em>, Mar. 2021.</p></div>
-                <div class="publication-item"><p><strong>適応的なノード埋め込みの伝搬による半教師ありノード分類モデル</strong>. [<a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/4Q-05.html">abstract</a>] <br> 小川 裕也, <u>前川 政司</u>, 佐々木 勇和, 藤原 靖宏, 鬼塚 真. <br> <em>情報処理学会第83回全国大会（IPSJ 2021）</em>, Mar. 2021. </p></div>
-                <div class="publication-item"><p><strong>時系列グラフにおける着目ノードに特化したリンク予測</strong>. [<a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/7J-05.html">abstract</a>] <br> 山口 寛人, <u>前川 政司</u>, 佐々木 勇和, 鬼塚 真. <br> <em>情報処理学会第83回全国大会（IPSJ 2021）</em>, Mar. 2021. </p></div>
-                <div class="publication-item"><p><strong>コミュニティ構造を制御する属性付きグラフ生成</strong>. [<a href="https://proceedings-of-deim.github.io/DEIM2021/papers/A24-4.pdf">pdf</a>] <br> <u>前川 政司</u>, 佐々木 勇和, George Fletcher, 鬼塚 真. <br> <em>第13回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2021）</em>, Mar. 2021.</p></div>
-                <div class="publication-item"><p><strong>半教師ありノード分類のための適応的ノード埋め込み伝搬ニューラルネットワーク</strong>. [<a href="https://proceedings-of-deim.github.io/DEIM2021/papers/E11-3.pdf">pdf</a>] <br> 小川 裕也, <u>前川 政司</u>, 佐々木 勇和, 藤原 靖宏, 鬼塚 真. <br> <em>第13回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2021）</em>, March 2021. </p></div>
-                <div class="publication-item"><p><strong>時系列グラフを活用する着目ノードに特化したリンク予測</strong>. [<a href="https://proceedings-of-deim.github.io/DEIM2021/papers/A31-2.pdf">pdf</a>] <br> 山口 寛人, <u>前川 政司</u>, 佐々木 勇和, 鬼塚 真. <br> <em>第13回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2021）</em>, Mar. 2021. </p></div>
-                <div class="publication-item"><p><strong>コミュニティ構造を考慮した属性付きグラフ汎用生成機構</strong>. [<a href="https://db-event.jpn.org/deim2019/post/papers/4.pdf">pdf</a>] <br> <u>前川 政司</u>, George Fletcher, 鬼塚 真. <br> <em>第11回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2019）</em>, Mar. 2019.</p></div>
-                <div class="publication-item"><p><strong>隣接性と構造類似性を考慮したグラフクラスタリング</strong>. [<a href="https://db-event.jpn.org/deim2019/post/papers/199.pdf">pdf</a>] <br> 小川 裕也, <u>前川 政司</u>, 竹内 孝, 佐々木 勇和, 鬼塚 真. <br> <em>第11回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2019）</em>, Mar. 2019.</p></div>
-                <div class="publication-item"><p><strong>属性付きグラフのための非線形関数を用いた接合加重非負値行列分解</strong>. [<a href="https://db-event.jpn.org/deim2018/data/papers/119.pdf">pdf</a>] <br> <u>前川 政司</u>, 竹内 孝, 佐々木 勇和, 鬼塚 真. <br> <em>第10回データ工学と情報マネジメントに関するフォーラム（DEIM Forum 2018）</em>, Mar. 2018. </p></div>
+                    <div class="publication-item">
+                        <div class="pub-title">Same Content, Different Representations: A Controlled Study for Table QA</div>
+                        <div class="pub-authors">Yue Zhang, <u>Seiji Maekawa</u>, Nikita Bhutani</div>
+                        <div class="pub-venue">arXiv preprint, Sep. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.22983" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">The Rarity Blind Spot: A Framework for Evaluating Statistical Reasoning in LLMs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Nikita Bhutani</div>
+                        <div class="pub-venue">arXiv preprint, Aug. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.00245" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/DiFBench" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Efficient Context Selection for Long-Context QA: No Tuning, No Iteration, Just Adaptive-k</div>
+                        <div class="pub-authors">Chihiro Taguchi, <u>Seiji Maekawa</u>, Nikita Bhutani</div>
+                        <div class="pub-venue">EMNLP 2025 <strong>(Oral)</strong></div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2506.08479" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/adaptive-k-retrieval" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Holistic Reasoning with Long-Context LMs: A Benchmark for Database Operations on Massive Textual Data</div>
+                        <div class="pub-authors"><u>Seiji Maekawa<sup>*</sup></u>, Hayate Iso<sup>*</sup>, Nikita Bhutani</div>
+                        <div class="pub-venue">ICLR 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2410.11996" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/holobench" class="btn-sm">Code</a>
+                            <a href="https://huggingface.co/datasets/megagonlabs/holobench" class="btn-sm">Data</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">From Single to Multi: How LLMs Hallucinate in Multi-Document Summarization</div>
+                        <div class="pub-authors">Catarina G. Belem, Pouya Pezeskhpour, Hayate Iso, <u>Seiji Maekawa</u>, Nikita Bhutani, Estevam Hruschka</div>
+                        <div class="pub-venue">Findings of NAACL 2025</div>
+                         <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2410.13961" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Retrieval Helps or Hurts? A Deeper Dive into the Efficacy of Retrieval Augmentation to Language Models</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Sairam Gurajada, Nikita Bhutani</div>
+                        <div class="pub-venue">NAACL 2024 <strong>(Oral)</strong>, acceptance rate: 23.2%</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2402.13492" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/witqa" class="btn-sm">Code</a>
+                            <a href="https://github.com/seijimaekawa/seijimaekawa.github.io/blob/test/files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Low-resource Interactive Active Labeling for Fine-tuning Language Models</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Dan Zhang, Hannah Kim, Sajjadur Rahman, Estevam Hruschka</div>
+                        <div class="pub-venue">Findings of EMNLP 2022</div>
+                        <div class="pub-links">
+                            <a href="https://aclanthology.org/2022.findings-emnlp.235/" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/Tyrogue" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Beyond Real-world Benchmark Datasets: An Empirical Study of Node Classification with GNNs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Koki Noda, Yuya Sasaki, Makoto Onizuka</div>
+                        <div class="pub-venue">NeurIPS 2022 (Datasets & Benchmarks)</div>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/forum?id=bSULxOy3On" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/empirical-study-of-GNNs" class="btn-sm">Code</a>
+                    </div>
+                </div>
             </div>
             
         </section>
 
         <section id="awards">
             <h2 class="section-title">Awards & Activities</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
+            <div class="grid-2-col">
+                <div class="interest-card simple-card">
                     <h3>Awards</h3>
-                    <ul>
-                        <li>Kasami Award [嵩賞]（2026）[<a href="https://www.ist.osaka-u.ac.jp/english/overview/award.php">Link</a>]</li>
-                        <li>DEIM2019 学生プレゼンテーション賞（2019）[<a href="https://db-event.jpn.org/deim2019/post/awards.html">Link</a>]</li>
-                        <li>I-Scover 利活用コンテストにて学生賞を受賞（2017）[成果物 <a href="https://public.tableau.com/profile/.2449#!/vizhome/I-Scover/07035">Link</a>]</li>
+                    <ul class="styled-list">
+                        <li><strong>Kasami Award [嵩賞]</strong> (2026) [<a href="https://www.ist.osaka-u.ac.jp/english/overview/award.php">Link</a>]</li>
+                        <li><strong>Student Presentation Award</strong> at DEIM 2019 [<a href="https://db-event.jpn.org/deim2019/post/awards.html">Link</a>]</li>
+                        <li><strong>Student Award</strong> at I-Scover Contest (2017) [<a href="https://public.tableau.com/profile/.2449#!/vizhome/I-Scover/07035">Link</a>]</li>
                     </ul>
                 </div>
-                <div class="interest-card">
-                    <h3>Talks</h3>
-                    <ul>
-                        <li>NLP Colloquium, "Holistic Reasoning with Long-Context LMs" [<a href="https://nlp-colloquium-jp.github.io/schedule/2025-05-07_seiji-maekawa/">link</a>] [<a href="https://www.youtube.com/watch?v=UAAcrgIADSQ">YouTube</a>], May 2025</li>
-                        <li>Tutorial, "グラフ深層学習のすゝめ" ("Introduction to Graph Neural Networks") [<a href="https://event.dbsj.org/deim2023/post/tutorial.html">link</a>] [<a href="https://www.youtube.com/watch?v=7rgXi3Xp6NI">YouTube</a>], DEIM 2023, Mar. 2023</li>
-                        <li>情処ラジオ [<a href="https://www.ipsj.or.jp/annai/committee/info-WP/josyo-radio.html">link</a>] [<a href="https://www.youtube.com/watch?v=Hhl-hS_qC2c">YouTube</a>], Feb. 2023</li>
+                <div class="interest-card simple-card">
+                    <h3>Recent Talks</h3>
+                    <ul class="styled-list">
+                        <li>"Holistic Reasoning with Long-Context LMs", NLP Colloquium (May 2025) [<a href="https://nlp-colloquium-jp.github.io/schedule/2025-05-07_seiji-maekawa/">link</a>] [<a href="https://www.youtube.com/watch?v=UAAcrgIADSQ">YouTube</a>]</li>
+                        <li>"Introduction to Graph Neural Networks (Tutorial)", DEIM 2023 [<a href="https://event.dbsj.org/deim2023/post/tutorial.html">link</a>] [<a href="https://www.youtube.com/watch?v=7rgXi3Xp6NI">YouTube</a>]</li>
+                        <li>Guest Speaker at Josho Radio (Feb 2023) [<a href="https://www.ipsj.or.jp/annai/committee/info-WP/josyo-radio.html">link</a>] [<a href="https://www.youtube.com/watch?v=Hhl-hS_qC2c">YouTube</a>]</li>
                     </ul>
                 </div>
-                <div class="interest-card">
-                    <h3>Community Service</h3>
-                    <ul>
-                        <li>I contributed an article regarding NeurIPS2022 to The Database Community of Japan (DBSJ) [<a href="https://dbsj.org/newsletter-vol-16-no-1/">link</a>] (Japanese)</li>
-                        <li>My Ph.D. thesis is featured in Information Processing Society of Japan🎉 [<a href="https://note.com/ipsj/n/nca6da907a586?magazine_key=m79652e151f17">link</a>] (Japanese)</li>
-                    </ul>
-                </div>
-                <div class="interest-card">
+            </div>
+            
+            <div class="service-section">
+                <div class="interest-card simple-card" style="width: 100%;">
                     <h3>Program Committee</h3>
-                    <ul>
+                    <ul class="styled-list">
                         <li>2026: ICLR </li>
                         <li>2025: ICLR, ARR May & July</li>
                         <li>2024: ARR April & October, ECML PKDD AI4HR & PES Workshop, EACL NLP4HR Workshop, SDM, TKDE</li>
@@ -216,81 +321,78 @@
         
         <section id="education">
           <h2 class="section-title">Education</h2>
-            <div class="timeline">
+            <div class="timeline no-line">
                 <div class="timeline-item">
-                    <h3>Ph.D. in Information Science and Technology</h3>
-                    <p><strong>Osaka University</strong> / 2020-04 ~ 2023-03<br><em>Research: graph neural networks, synthetic graph generation</em></p>
+                    <div class="content">
+                        <h3>Ph.D. in Information Science and Technology</h3>
+                        <p><strong>Osaka University</strong> / 2020-2023</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>MS in Information Science and Technology</h3>
-                    <p><strong>Osaka University</strong> / 2017-04 ~ 2019-03<br><em>Research: graph clustering, synthetic graph generation</em></p>
+                    <div class="content">
+                        <h3>MS in Information Science and Technology</h3>
+                        <p><strong>Osaka University</strong> / 2017-2019</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>BE in Informatics</h3>
-                    <p><strong>Kyoto University</strong> / 2012-04 ~ 2016-09<br><em>Research: topic model, word embedding</em></p>
+                    <div class="content">
+                        <h3>BE in Informatics</h3>
+                        <p><strong>Kyoto University</strong> / 2012-2016</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li>Python3
-                            <ul>
-                                <li>Jupyter notebook</li>
-                                <li>pytorch, sklearn, numpy, scipy, pandas, etc.</li>
-                            </ul>
-                        </li>
-                        <li>C++</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <span class="skill-tag">Python (PyTorch, sklearn, NumPy)</span>
+                <span class="skill-tag">LLMs (RAG, Agents)</span>
+                <span class="skill-tag">Graph Neural Networks</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
             </div>
         </section>
 
     </main>
+</div>
 
-    <footer class="footer">
-        <p id="last-modified">Last modified: </p>
-        <p>© 2025 Seiji Maekawa. All Rights Reserved.</p>
-      </footer>
-  
-      <script>
-        // --- Last Modified Date Script ---
-        (function() {
-          const lastModifiedElement = document.getElementById('last-modified');
-          if (lastModifiedElement) {
-            const lastModifiedDate = new Date(document.lastModified);
-            const year = lastModifiedDate.getFullYear();
-            const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
-            const day = String(lastModifiedDate.getDate()).padStart(2, '0');
-            const formattedDate = `${year}/${month}/${day}`;
-            lastModifiedElement.textContent += formattedDate;
-          }
-        })();
-  
-        // --- Hamburger Menu Script (ここから新規追加) ---
-        (function() {
-          const toggler = document.getElementById('navbar-toggler');
-          const menu = document.getElementById('navbar-links');
-          const menuLinks = menu.querySelectorAll('a');
-  
-          // トグルボタンがクリックされたらメニューの表示/非表示を切り替え
-          toggler.addEventListener('click', function() {
-            menu.classList.toggle('is-active');
-          });
-  
-          // メニュー内のリンクがクリックされたらメニューを閉じる
-          menuLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-              menu.classList.remove('is-active');
+<script>
+    // --- Last Modified Date Script ---
+    (function() {
+        const lastModifiedElement = document.getElementById('last-modified');
+        if (lastModifiedElement) {
+        const lastModifiedDate = new Date(document.lastModified);
+        const year = lastModifiedDate.getFullYear();
+        const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
+        const day = String(lastModifiedDate.getDate()).padStart(2, '0');
+        const formattedDate = `${year}/${month}/${day}`;
+        lastModifiedElement.textContent += formattedDate;
+        }
+    })();
+
+    // --- Mobile Menu Toggle ---
+    (function() {
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if(toggleBtn){
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
             });
-          });
-        })();
-      </script>
-  
-  </body>
-  </html>
+        }
+        
+        // Close sidebar when clicking a link (on mobile)
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

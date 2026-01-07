@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Seiji MAEKAWA</title>
+    <!-- Elegant Serif for Headlines, Clean Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+            <div class="profile-header">
+                <a href="index.html">
+                    <img class="profile-picture" src="seiji_hp_wide.jpg" alt="Seiji Maekawa"/>
+                </a>
+                <h1 class="about-name"><a href="index.html" style="color: inherit;">Seiji MAEKAWA</a> <br> <span class="jp-name">(前川 政司)</span></h1>
+                <p class="current-position">
+                    Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>
+                    Mountain View, CA
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                   seiji [at] megagon.ai
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="index.html#experiences">Experiences</a></li>
+                    <li><a href="publications.html" style="opacity: 1; font-weight: 700;">Publications</a></li>
+                    <li><a href="index.html#awards">Awards</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                </ul>
+            </nav>
+
+            <footer class="sidebar-footer">
+                <p>© 2025 Seiji Maekawa.</p>
+                <p><a href="index.html">Back to Home</a></p>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="container">
+            <a class="mobile-brand" href="index.html">S. Maekawa</a>
+            <button class="mobile-menu-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <section id="publications-full">
+            <h2 class="section-title">Full Publication List</h2>
+
+            <div class="pub-category">
+                <h3>Preprint</h3>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <div class="pub-title">Towards Reliable Benchmarking: A Contamination Free, Controllable Evaluation Framework for Multi-step LLM Function Calling</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Jackson Hassell, Pouya Pezeshkpour, Tom Mitchell, Estevam Hruschka</div>
+                        <div class="pub-venue">arXiv preprint, Sep. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.26553" class="btn-sm">Paper</a>
+                        </div>
+                    </div>                
+                    <div class="publication-item">
+                        <div class="pub-title">Same Content, Different Representations: A Controlled Study for Table QA</div>
+                        <div class="pub-authors">Yue Zhang, <u>Seiji Maekawa</u>, Nikita Bhutani</div>
+                        <div class="pub-venue">arXiv preprint, Sep. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.22983" class="btn-sm">Paper</a>
+                        </div>
+                    </div>                
+                    <div class="publication-item">
+                        <div class="pub-title">The Rarity Blind Spot: A Framework for Evaluating Statistical Reasoning in LLMs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Nikita Bhutani</div>
+                        <div class="pub-venue">arXiv preprint, Aug. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.00245" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/DiFBench" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">A Simple and Scalable Graph Neural Network for Large Directed Graphs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka</div>
+                        <div class="pub-venue">arXiv preprint, June 2023</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2306.08274" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/A2DUG" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pub-category">
+                <h3>International Conferences & Workshops</h3>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <div class="pub-title">Efficient Context Selection for Long-Context QA: No Tuning, No Iteration, Just Adaptive-k</div>
+                        <div class="pub-authors">Chihiro Taguchi, <u>Seiji Maekawa</u>, Nikita Bhutani</div>
+                        <div class="pub-venue">EMNLP 2025 <strong>(Oral)</strong></div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2506.08479" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/adaptive-k-retrieval" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Holistic Reasoning with Long-Context LMs: A Benchmark for Database Operations on Massive Textual Data</div>
+                        <div class="pub-authors"><u>Seiji Maekawa<sup>*</sup></u>, Hayate Iso<sup>*</sup>, Nikita Bhutani</div>
+                        <div class="pub-venue">ICLR 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2410.11996" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/holobench" class="btn-sm">Code</a>
+                            <a href="https://huggingface.co/datasets/megagonlabs/holobench" class="btn-sm">Data</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">From Single to Multi: How LLMs Hallucinate in Multi-Document Summarization</div>
+                        <div class="pub-authors">Catarina G. Belem, Pouya Pezeskhpour, Hayate Iso, <u>Seiji Maekawa</u>, Nikita Bhutani, Estevam Hruschka</div>
+                        <div class="pub-venue">Findings of NAACL 2025</div>
+                         <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2410.13961" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Retrieval Helps or Hurts? A Deeper Dive into the Efficacy of Retrieval Augmentation to Language Models</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Sairam Gurajada, Nikita Bhutani</div>
+                        <div class="pub-venue">NAACL 2024 <strong>(Oral)</strong>, acceptance rate: 23.2%</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2402.13492" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/witqa" class="btn-sm">Code</a>
+                            <a href="https://github.com/seijimaekawa/seijimaekawa.github.io/blob/test/files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Low-resource Interactive Active Labeling for Fine-tuning Language Models</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Dan Zhang, Hannah Kim, Sajjadur Rahman, Estevam Hruschka</div>
+                        <div class="pub-venue">Findings of EMNLP 2022</div>
+                        <div class="pub-links">
+                            <a href="https://aclanthology.org/2022.findings-emnlp.235/" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/Tyrogue" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Beyond Real-world Benchmark Datasets: An Empirical Study of Node Classification with GNNs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Koki Noda, Yuya Sasaki, Makoto Onizuka</div>
+                        <div class="pub-venue">NeurIPS 2022 (Datasets & Benchmarks)</div>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/forum?id=bSULxOy3On" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/empirical-study-of-GNNs" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">GNN Transformation Framework for Improving Efficiency and Scalability</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka</div>
+                        <div class="pub-venue">ECML/PKDD 2022</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2207.12000" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/LCtransformation" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="pub-title">Benchmarking GNNs with GenCAT Workbench</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka</div>
+                        <div class="pub-venue">Demo track of ECML/PKDD 2022</div>
+                        <div class="pub-links">
+                            <a href="https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_1444.pdf" class="btn-sm">Paper</a>
+                             <a href="https://github.com/seijimaekawa/GenCAT/tree/main/GenCAT_Workbench" class="btn-sm">Code</a>
+                            <a href="https://www.youtube.com/watch?v=28xVOHRDpCE" class="btn-sm">Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Effective Candidate Selection and Interpretable Interest Extraction for Follower Prediction on Social Media</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Santi Saeyor, Takeshi Sakaki, Makoto Onizuka</div>
+                        <div class="pub-venue">WI-IAT 2021</div>
+                        <div class="pub-links">
+                             <a href="https://dl.acm.org/doi/fullHtml/10.1145/3486622.3493954" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Adaptive Node Embedding Propagation for Semi-Supervised Classification</div>
+                        <div class="pub-authors">Yuya Ogawa, <u>Seiji Maekawa</u>, Yuya Sasaki, Yasuhiro Fujiwara, Makoto Onizuka</div>
+                        <div class="pub-venue">ECML/PKDD 2021</div>
+                        <div class="pub-links">
+                            <a href="https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_662.pdf" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">Controlling Internal Structure of Communities on Graph Generator</div>
+                        <div class="pub-authors">Hiroto Yamaguchi, Yuya Ogawa, <u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka</div>
+                        <div class="pub-venue">IEEE/ACM ASONAM 2020 (Demos)</div>
+                        <div class="pub-links">
+                            <a href="https://www.computer.org/csdl/proceedings-article/asonam/2020/09381439/1semypsPsFq" class="btn-sm">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-title">General Generator for Attributed Graphs with Community Structure</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Jianpeng Zhang, George Fletcher, Makoto Onizuka</div>
+                        <div class="pub-venue">ECML/PKDD GEM Workshop 2019</div>
+                        <div class="pub-links">
+                            <a href="https://gem-ecmlpkdd.github.io/archive/2019/papers/" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/acMark" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category">
+                <h3>Journal Papers</h3>
+                 <div class="publication-list">
+                    <div class="publication-item">
+                        <div class="pub-title">GenCAT: Generating Attributed Graphs with Controlled Relationships between Classes, Attributes, and Topology</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, George Fletcher, Makoto Onizuka</div>
+                        <div class="pub-venue">Information Systems, Feb. 2023</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2109.04639" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/GenCAT" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">New Attributed Graph Clustering by Bridging Attribute and Topology Spaces</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Koh Takeuchi, Makoto Onizuka</div>
+                        <div class="pub-venue">Information Processing Society of Japan, Aug. 2020</div>
+                        <div class="pub-links">
+                            <a href="https://www.jstage.jst.go.jp/article/ipsjjip/28/0/28_427/_article/-char/ja/" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/NAGC" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pub-category">
+                <h3>Domestic Conferences/Others</h3>
+                <div class="publication-list">
+                     <div class="publication-item">
+                        <div class="pub-title">多様な人工グラフを用いた GNN によるノード分類の実証研究</div>
+                        <div class="pub-authors"><u>前川 政司</u>, 野田 昂希, 佐々木 勇和, 鬼塚 真</div>
+                        <div class="pub-venue">DEIM Forum 2023, Mar. 2023</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">コミュニティ構造を制御可能な属性付きグラフ生成</div>
+                        <div class="pub-authors"><u>前川 政司</u>, 佐々木 勇和, George Fletcher, 鬼塚 真</div>
+                        <div class="pub-venue">IPSJ 2021, Mar. 2021</div>
+                        <div class="pub-links">
+                            <a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/6B-02.html" class="btn-sm">Abstract</a>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">適応的なノード埋め込みの伝搬による半教師ありノード分類モデル</div>
+                        <div class="pub-authors">小川 裕也, <u>前川 政司</u>, 佐々木 勇和, 藤原 靖宏, 鬼塚 真</div>
+                        <div class="pub-venue">IPSJ 2021, Mar. 2021</div>
+                        <div class="pub-links">
+                            <a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/4Q-05.html" class="btn-sm">Abstract</a>
+                        </div>
+                    </div>
+                     <div class="publication-item">
+                         <div class="pub-title">時系列グラフにおける着目ノードに特化したリンク予測</div>
+                         <div class="pub-authors">山口 寛人, <u>前川 政司</u>, 佐々木 勇和, 鬼塚 真</div>
+                         <div class="pub-venue">IPSJ 2021, Mar. 2021</div>
+                         <div class="pub-links">
+                             <a href="https://www.ipsj.or.jp/event/taikai/83/ipsj_web2021/data/pdf/7J-05.html" class="btn-sm">Abstract</a>
+                         </div>
+                     </div>
+                     <div class="publication-item">
+                         <div class="pub-title">コミュニティ構造を制御する属性付きグラフ生成</div>
+                         <div class="pub-authors"><u>前川 政司</u>, 佐々木 勇和, George Fletcher, 鬼塚 真</div>
+                         <div class="pub-venue">DEIM Forum 2021, Mar. 2021</div>
+                         <div class="pub-links">
+                             <a href="https://proceedings-of-deim.github.io/DEIM2021/papers/A24-4.pdf" class="btn-sm">PDF</a>
+                         </div>
+                     </div>
+                    <div class="publication-item">
+                         <div class="pub-title">半教師ありノード分類のための適応的ノード埋め込み伝搬ニューラルネットワーク</div>
+                         <div class="pub-authors">小川 裕也, <u>前川 政司</u>, 佐々木 勇和, 藤原 靖宏, 鬼塚 真</div>
+                         <div class="pub-venue">DEIM Forum 2021, March 2021</div>
+                         <div class="pub-links">
+                             <a href="https://proceedings-of-deim.github.io/DEIM2021/papers/E11-3.pdf" class="btn-sm">PDF</a>
+                         </div>
+                     </div>
+                     <div class="publication-item">
+                          <div class="pub-title">時系列グラフを活用する着目ノードに特化したリンク予測</div>
+                          <div class="pub-authors">山口 寛人, <u>前川 政司</u>, 佐々木 勇和, 鬼塚 真</div>
+                          <div class="pub-venue">DEIM Forum 2021, Mar. 2021</div>
+                          <div class="pub-links">
+                              <a href="https://proceedings-of-deim.github.io/DEIM2021/papers/A31-2.pdf" class="btn-sm">PDF</a>
+                          </div>
+                      </div>
+                      <div class="publication-item">
+                          <div class="pub-title">コミュニティ構造を考慮した属性付きグラフ汎用生成機構</div>
+                          <div class="pub-authors"><u>前川 政司</u>, George Fletcher, 鬼塚 真</div>
+                          <div class="pub-venue">DEIM Forum 2019, Mar. 2019</div>
+                          <div class="pub-links">
+                              <a href="https://db-event.jpn.org/deim2019/post/papers/4.pdf" class="btn-sm">PDF</a>
+                          </div>
+                      </div>
+                      <div class="publication-item">
+                          <div class="pub-title">隣接性と構造類似性を考慮したグラフクラスタリング</div>
+                          <div class="pub-authors">小川 裕也, <u>前川 政司</u>, 竹内 孝, 佐々木 勇和, 鬼塚 真</div>
+                          <div class="pub-venue">DEIM Forum 2019, Mar. 2019</div>
+                          <div class="pub-links">
+                              <a href="https://db-event.jpn.org/deim2019/post/papers/199.pdf" class="btn-sm">PDF</a>
+                          </div>
+                      </div>
+                      <div class="publication-item">
+                          <div class="pub-title">属性付きグラフのための非線形関数を用いた接合加重非負値行列分解</div>
+                          <div class="pub-authors"><u>前川 政司</u>, 竹内 孝, 佐々木 勇和, 鬼塚 真</div>
+                          <div class="pub-venue">DEIM Forum 2018, Mar. 2018</div>
+                          <div class="pub-links">
+                              <a href="https://db-event.jpn.org/deim2018/data/papers/119.pdf" class="btn-sm">PDF</a>
+                          </div>
+                      </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script>
+    // --- Mobile Menu Toggle ---
+    (function() {
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if(toggleBtn){
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+        }
+        
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
