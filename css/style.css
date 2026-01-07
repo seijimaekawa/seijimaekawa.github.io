@@ -504,36 +504,73 @@ section {
 
 /* Tablet & Mobile */
 @media (max-width: 900px) {
-    .sidebar {
-        position: fixed;
-        left: -320px; /* Hide sidebar off-screen */
-        top: 0;
-        bottom: 0;
-        transition: left 0.3s ease-in-out;
-        width: 280px;
-        box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    .layout-wrapper {
+        flex-direction: column;
     }
-    
-    .sidebar.active {
-        left: 0;
+
+    /* Sidebar becomes Top Section on Mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* Normal flow */
+        background-color: var(--sidebar-bg);
+        z-index: 100;
+        box-shadow: none;
     }
 
     .sidebar-sticky {
+        position: relative;
         width: 100%;
-        position: relative; /* Inside the sliding drawer */
         height: auto;
-        min-height: 100%;
+        padding: 3rem 1.5rem 2rem;
+        text-align: center;
     }
 
+    .profile-header {
+        margin-bottom: 2rem;
+    }
+    
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+
+    /* Sidebar nav becomes a horizontal list or grid grid */
+    .sidebar-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+    }
+    
+    .sidebar-nav li {
+        margin-bottom: 0;
+    }
+
+    .sidebar-nav a {
+        padding: 5px 10px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    /* Hide the mobile header toggle since sidebar is always visible */
     .mobile-header {
-        display: flex; /* Show mobile header */
+        display: none !important;
     }
 
     .main-content {
-        padding: calc(var(--mobile-header-height) + 2rem) 1.5rem 3rem;
+        padding: 3rem 1.5rem 4rem; /* Standard mobile padding */
+        max-width: 100%;
+        width: 100%;
     }
     
     .grid-2-col {
         grid-template-columns: 1fr;
+    }
+
+    section {
+        margin-bottom: 4rem;
     }
 }
