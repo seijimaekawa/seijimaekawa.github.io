@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Noto Sans JP', sans-serif;
     color: var(--text-body);
     background-color: var(--bg-color);
     line-height: 1.6;
@@ -30,7 +30,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Noto Sans JP', serif;
     color: var(--text-heading);
     margin-bottom: 0.5rem;
 }
@@ -573,4 +573,35 @@ section {
     section {
         margin-bottom: 4rem;
     }
+}
+
+/* Language Switch Button */
+#lang-switch {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #cbd5e1;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#lang-switch:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    border-color: white;
+}
+
+/* Language Visibility */
+html[lang="en"] .lang-jp {
+    display: none !important;
+}
+
+html[lang="ja"] .lang-en {
+    display: none !important;
 }
