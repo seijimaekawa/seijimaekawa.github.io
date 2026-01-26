@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
                 <img class="profile-picture" src="seiji_hp_wide.jpg" alt="Seiji Maekawa"/>
                 <h1 class="about-name">Seiji MAEKAWA <br> <span class="jp-name">(前川 政司)</span></h1>
                 <p class="current-position">
-                    Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>
-                    Mountain View, CA
+                    <span class="lang-en">Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>Mountain View, CA</span>
+                    <span class="lang-jp">Megagon Labs リサーチサイエンティスト<br>（カリフォルニア州 マウンテンビュー）</span>
                 </p>
                 <div class="social-links">
                     <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -33,21 +33,25 @@
                 </div>
             </div>
 
+            <button id="lang-switch" aria-label="Switch to Japanese">日本語</button>
             <nav class="sidebar-nav">
                 <ul> <!-- Removed href='#' to avoid jump to top, smooth scroll handled by css -->
-                    <li><a href="index.html#about">About</a></li> <!-- Added About ID -->
-                    <li><a href="index.html#research">Research</a></li>
-                    <li><a href="index.html#experiences">Experiences</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="index.html#awards">Awards</a></li> <!-- Added Awards link -->
-                    <li><a href="index.html#education">Education</a></li>
-                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#about"><span class="lang-en">About</span><span class="lang-jp">自己紹介</span></a></li>
+                    <li><a href="index.html#research"><span class="lang-en">Research</span><span class="lang-jp">研究分野</span></a></li>
+                    <li><a href="index.html#experiences"><span class="lang-en">Experiences</span><span class="lang-jp">経歴</span></a></li>
+                    <li><a href="publications.html"><span class="lang-en">Publications</span><span class="lang-jp">業績</span></a></li>
+                    <li><a href="index.html#awards"><span class="lang-en">Awards</span><span class="lang-jp">受賞歴</span></a></li>
+                    <li><a href="index.html#education"><span class="lang-en">Education</span><span class="lang-jp">学歴</span></a></li>
+                    <li><a href="index.html#skills"><span class="lang-en">Skills</span><span class="lang-jp">スキル</span></a></li>
                 </ul>
             </nav>
 
             <footer class="sidebar-footer">
                 <p>© 2025 Seiji Maekawa.</p>
-                <p id="last-modified" class="last-mod">Last modified: </p>
+                <p id="last-modified" class="last-mod">
+                    <span class="lang-en">Last modified: </span>
+                    <span class="lang-jp">最終更新: </span>
+                </p>
             </footer>
         </div>
     </aside>
@@ -66,130 +70,159 @@
     <main class="main-content">
         
         <section id="about" class="intro-section">
-            <h2 class="section-title">About Me</h2>
-            <p class="intro-text">
-                I am a Research Scientist at <strong>Megagon Labs</strong> in Mountain View, California. 
-                I hold a Ph.D. in Information Science and Technology from Osaka University.
-                My research passion lies at the intersection of <strong>Natural Language Processing</strong> (NLP), <strong>Graph Neural Networks</strong> (GNNs), and <strong>Machine Learning</strong>.
-            </p>
-            <p class="intro-text">
-                Currently, I am focusing on making Large Language Models (LLMs) more reliable and capable through function calling, retrieval augmentation, and long-context understanding.
-            </p>
+            <h2 class="section-title"><span class="lang-en">About Me</span><span class="lang-jp">自己紹介</span></h2>
+            <div class="lang-en">
+                <p class="intro-text">
+                    I am a Research Scientist at <strong>Megagon Labs</strong> in Mountain View, California. 
+                    I hold a Ph.D. in Information Science and Technology from Osaka University.
+                    My research passion lies at the intersection of <strong>Natural Language Processing</strong> (NLP), <strong>Graph Neural Networks</strong> (GNNs), and <strong>Machine Learning</strong>.
+                </p>
+                <p class="intro-text">
+                    Currently, I am focusing on making Large Language Models (LLMs) more reliable and capable through function calling, retrieval augmentation, and long-context understanding.
+                </p>
+            </div>
+            <div class="lang-jp">
+                <p class="intro-text">
+                    私はMegagon Labs（米国カリフォルニア州マウンテンビュー）のリサーチサイエンティストです。
+                    2023年に大阪大学にて博士号（情報科学）を取得し、その後から現職。
+                    <strong>自然言語処理</strong> (NLP)、<strong>グラフニューラルネットワーク</strong> (GNN)、<strong>機械学習</strong>を中心に研究の情熱を注いでいます。
+                </p>
+                <p class="intro-text">
+                    現在は、関数呼出、検索拡張 (RAG)、長文脈理解を通じて、大規模言語モデル (LLM) をより信頼性が高く、有能なものにすることに注力しています。
+                </p>
+            </div>
         </section>
 
         <section id="research">
-            <h2 class="section-title">Research Interests</h2>
+            <h2 class="section-title"><span class="lang-en">Research Interests</span><span class="lang-jp">研究分野</span></h2>
             <div class="interests-grid">
                 <div class="interest-card">
                     <div class="card-icon"><i class="fas fa-brain"></i></div>
-                    <h3>NLP & LLMs</h3>
+                    <h3><span class="lang-en">NLP & LLMs</span><span class="lang-jp">自然言語処理 & LLM</span></h3>
                     <ul>
-                        <li>Function Calling & Tool Use</li>
-                        <li>Long-context Understanding</li>
-                        <li>Retrieval-Augmented Generation (RAG)</li>
-                        <li>Active Learning</li>
+                        <li><span class="lang-en">Function Calling & Tool Use</span><span class="lang-jp">関数呼出とツール利用</span></li>
+                        <li><span class="lang-en">Long-context Understanding</span><span class="lang-jp">長文脈理解</span></li>
+                        <li><span class="lang-en">Retrieval-Augmented Generation (RAG)</span><span class="lang-jp">検索拡張生成 (RAG)</span></li>
+                        <li><span class="lang-en">Active Learning</span><span class="lang-jp">能動学習</span></li>
                     </ul>
                 </div>
                 <div class="interest-card">
                     <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Graph Processing</h3>
+                    <h3><span class="lang-en">Graph Processing</span><span class="lang-jp">グラフ処理</span></h3>
                     <ul>
-                        <li>Graph Neural Networks (GNNs)</li>
-                        <li>Synthetic Graph Generation</li>
-                        <li>Attributed Graph Clustering</li>
+                        <li><span class="lang-en">Graph Neural Networks (GNNs)</span><span class="lang-jp">グラフニューラルネットワーク (GNN)</span></li>
+                        <li><span class="lang-en">Synthetic Graph Generation</span><span class="lang-jp">合成グラフ生成</span></li>
+                        <li><span class="lang-en">Attributed Graph Clustering</span><span class="lang-jp">属性付きグラフクラスタリング</span></li>
                     </ul>
                 </div>
                 <div class="interest-card">
                     <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h3>Social Network Analysis</h3>
+                    <h3><span class="lang-en">Social Network Analysis</span><span class="lang-jp">ソーシャルネットワーク分析</span></h3>
                     <ul>
-                        <li>Follower Prediction / Link Prediction</li>
-                        <li>Analysis on Incomplete Networks</li>
+                        <li><span class="lang-en">Follower Prediction / Link Prediction</span><span class="lang-jp">フォロワー予測 / リンク予測</span></li>
+                        <li><span class="lang-en">Analysis on Incomplete Networks</span><span class="lang-jp">不完全ネットワークの分析</span></li>
                     </ul>
                 </div>
                  <div class="interest-card">
                     <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <h3>Graph Database</h3>
+                    <h3><span class="lang-en">Graph Database</span><span class="lang-jp">グラフデータベース</span></h3>
                     <ul>
-                        <li>Language-aware Indexing</li>
-                        <li>Query Languages</li>
+                        <li><span class="lang-en">Language-aware Indexing</span><span class="lang-jp">言語認識インデックス</span></li>
+                        <li><span class="lang-en">Query Languages</span><span class="lang-jp">クエリ言語</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="experiences">
-            <h2 class="section-title">Experiences</h2>
+            <h2 class="section-title"><span class="lang-en">Experiences</span><span class="lang-jp">経歴</span></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="date">2024.04 - Present</span>
                     <div class="content">
-                        <h3>Research Scientist</h3>
-                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
+                        <h3><span class="lang-en">Research Scientist</span><span class="lang-jp">リサーチサイエンティスト</span></h3>
+                        <p><span class="lang-en"><strong>Megagon Labs Inc.</strong>, Mountain View, CA</span>
+                           <span class="lang-jp"><strong>Megagon Labs Inc.</strong>, カリフォルニア州 マウンテンビュー</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2023.04 - 2024.03</span>
                     <div class="content">
-                        <h3>Research Associate</h3>
-                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
+                        <h3><span class="lang-en">Research Associate</span><span class="lang-jp">リサーチアソシエイト</span></h3>
+                        <p><span class="lang-en"><strong>Megagon Labs Inc.</strong>, Mountain View, CA</span>
+                           <span class="lang-jp"><strong>Megagon Labs Inc.</strong>, カリフォルニア州 マウンテンビュー</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2022.01 - 2022.04</span>
                     <div class="content">
-                        <h3>Research Intern</h3>
-                        <p><strong>Megagon Labs Inc.</strong>, Mountain View, CA</p>
-                        <p class="desc">Working on Low-budget active learning to reduce labeling costs.</p>
+                        <h3><span class="lang-en">Research Intern</span><span class="lang-jp">リサーチインターン</span></h3>
+                        <p><span class="lang-en"><strong>Megagon Labs Inc.</strong>, Mountain View, CA</span>
+                           <span class="lang-jp"><strong>Megagon Labs Inc.</strong>, カリフォルニア州 マウンテンビュー</span></p>
+                        <p class="desc">
+                            <span class="lang-en">Working on Low-budget active learning to reduce labeling costs.</span>
+                            <span class="lang-jp">ラベリングコスト削減のための低予算アクティブラーニング。</span>
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2020.09 - 2020.10</span>
                     <div class="content">
-                        <h3>Research Intern</h3>
-                        <p><strong>Hotto Link Inc.</strong>, Remote</p>
-                        <p class="desc">Follower prediction with limited API calls.</p>
+                        <h3><span class="lang-en">Research Intern</span><span class="lang-jp">リサーチインターン</span></h3>
+                        <p><span class="lang-en"><strong>Hotto Link Inc.</strong>, Remote</span>
+                           <span class="lang-jp"><strong>株式会社ホットリンク</strong>, リモート</span></p>
+                        <p class="desc">
+                            <span class="lang-en">Follower prediction with limited API calls.</span>
+                            <span class="lang-jp">限られたAPIコールでのフォロワー予測。</span>
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2020.04 - 2023.03</span>
                     <div class="content">
-                        <h3>Specially Appointed Researcher</h3>
-                        <p><strong>Osaka University</strong>, Osaka, Japan</p>
+                        <h3><span class="lang-en">Specially Appointed Researcher</span><span class="lang-jp">特任研究員</span></h3>
+                        <p><span class="lang-en"><strong>Osaka University</strong>, Osaka, Japan</span>
+                           <span class="lang-jp"><strong>大阪大学</strong>, 大阪</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2019.04 - 2020.03</span>
                     <div class="content">
-                        <h3>Sales Engineer</h3>
-                        <p><strong>NTT Docomo, Inc.</strong>, Tokyo, Japan</p>
+                        <h3><span class="lang-en">Sales Engineer</span><span class="lang-jp">セールスエンジニア</span></h3>
+                        <p><span class="lang-en"><strong>NTT Docomo, Inc.</strong>, Tokyo, Japan</span>
+                           <span class="lang-jp"><strong>株式会社NTTドコモ</strong>, 東京</span></p>
                     </div>
                 </div>
                  <div class="timeline-item">
                     <span class="date">2018.10 - 2018.12</span>
                     <div class="content">
-                        <h3>Guest Student</h3>
-                        <p><strong>Eindhoven University of Technology</strong>, Netherlands</p>
+                        <h3><span class="lang-en">Guest Student</span><span class="lang-jp">ゲスト学生</span></h3>
+                        <p><span class="lang-en"><strong>Eindhoven University of Technology</strong>, Netherlands</span>
+                           <span class="lang-jp"><strong>アイントホーフェン工科大学</strong>, オランダ</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="date">2017.09</span>
                     <div class="content">
-                        <h3>Visiting Student</h3>
-                        <p><strong>The Chinese University of Hong Kong</strong>, Hong Kong</p>
+                        <h3><span class="lang-en">Visiting Student</span><span class="lang-jp">訪問学生</span></h3>
+                        <p><span class="lang-en"><strong>The Chinese University of Hong Kong</strong>, Hong Kong</span>
+                           <span class="lang-jp"><strong>香港中文大学</strong>, 香港</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="publications">
-            <h2 class="section-title">Selected Publications</h2>
+            <h2 class="section-title"><span class="lang-en">Selected Publications</span><span class="lang-jp">主な発表論文</span></h2>
             <div style="margin-bottom: 2rem;">
-            <a href="publications.html" style="font-weight: 700; text-decoration: underline;">View Full Publication List &rarr;</a>
+            <a href="publications.html" style="font-weight: 700; text-decoration: underline;">
+                <span class="lang-en">View Full Publication List &rarr;</span>
+                <span class="lang-jp">全発表論文リストを見る &rarr;</span>
+            </a>
             </div>
 
             <div class="pub-category">
-                <h3>Selected Works</h3>
+                <h3><span class="lang-en">Selected Works</span><span class="lang-jp">主な研究成果</span></h3>
                 <div class="publication-list">
                     <!-- 2025 -->
                     <div class="publication-item">
@@ -287,18 +320,30 @@
         </section>
 
         <section id="awards">
-            <h2 class="section-title">Awards & Activities</h2>
+            <h2 class="section-title"><span class="lang-en">Awards & Activities</span><span class="lang-jp">受賞歴 & 活動</span></h2>
             <div class="grid-2-col">
                 <div class="interest-card simple-card">
-                    <h3>Awards</h3>
+                    <h3><span class="lang-en">Awards</span><span class="lang-jp">受賞歴</span></h3>
                     <ul class="styled-list">
-                        <li><strong>Kasami Award [嵩賞]</strong> (Outstanding Young Researcher Award), 2026 [<a href="https://www.ist.osaka-u.ac.jp/english/overview/award.php">Link</a>]</li>
-                        <li><strong>Student Presentation Award</strong> at DEIM 2019 [<a href="https://db-event.jpn.org/deim2019/post/awards.html">Link</a>]</li>
-                        <li><strong>Student Award</strong> at I-Scover Contest, 2017 [<a href="https://public.tableau.com/profile/.2449#!/vizhome/I-Scover/07035">Link</a>]</li>
+                        <li>
+                            <span class="lang-en"><strong>Kasami Award [嵩賞]</strong> (Outstanding Young Researcher Award), 2026</span>
+                            <span class="lang-jp"><strong>嵩賞</strong> (Outstanding Young Researcher Award), 2026</span>
+                            [<a href="https://www.ist.osaka-u.ac.jp/english/overview/award.php">Link</a>]
+                        </li>
+                        <li>
+                            <span class="lang-en"><strong>Student Presentation Award</strong> at DEIM 2019</span>
+                            <span class="lang-jp"><strong>学生プレゼンテーション賞</strong> at DEIM 2019</span>
+                            [<a href="https://db-event.jpn.org/deim2019/post/awards.html">Link</a>]
+                        </li>
+                        <li>
+                            <span class="lang-en"><strong>Student Award</strong> at I-Scover Contest, 2017</span>
+                            <span class="lang-jp"><strong>学生賞</strong> at I-Scover Contest, 2017</span>
+                            [<a href="https://public.tableau.com/profile/.2449#!/vizhome/I-Scover/07035">Link</a>]
+                        </li>
                     </ul>
                 </div>
                 <div class="interest-card simple-card">
-                    <h3>Recent Talks</h3>
+                    <h3><span class="lang-en">Recent Talks</span><span class="lang-jp">最近の講演</span></h3>
                     <ul class="styled-list">
                         <li>"Holistic Reasoning with Long-Context LMs", NLP Colloquium (May 2025) [<a href="https://nlp-colloquium-jp.github.io/schedule/2025-05-07_seiji-maekawa/">link</a>] [<a href="https://www.youtube.com/watch?v=UAAcrgIADSQ">YouTube</a>]</li>
                         <li>"Introduction to Graph Neural Networks (Tutorial)", DEIM 2023 [<a href="https://event.dbsj.org/deim2023/post/tutorial.html">link</a>] [<a href="https://www.youtube.com/watch?v=7rgXi3Xp6NI">YouTube</a>]</li>
@@ -309,7 +354,7 @@
             
             <div class="service-section">
                 <div class="interest-card simple-card" style="width: 100%;">
-                    <h3>Program Committee</h3>
+                    <h3><span class="lang-en">Program Committee</span><span class="lang-jp">査読経験</span></h3>
                     <ul class="styled-list">
                         <li>2026: ICLR </li>
                         <li>2025: ICLR, ARR May & July</li>
@@ -322,31 +367,31 @@
         </section>
         
         <section id="education">
-          <h2 class="section-title">Education</h2>
+          <h2 class="section-title"><span class="lang-en">Education</span><span class="lang-jp">学歴</span></h2>
             <div class="timeline no-line">
                 <div class="timeline-item">
                     <div class="content">
-                        <h3>Ph.D. in Information Science and Technology</h3>
-                        <p><strong>Osaka University</strong> / 2020-2023</p>
+                        <h3><span class="lang-en">Ph.D. in Information Science and Technology</span><span class="lang-jp">博士（情報科学）</span></h3>
+                        <p><span class="lang-en"><strong>Osaka University</strong> / 2020-2023</span><span class="lang-jp"><strong>大阪大学</strong> / 2020-2023</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="content">
-                        <h3>MS in Information Science and Technology</h3>
-                        <p><strong>Osaka University</strong> / 2017-2019</p>
+                        <h3><span class="lang-en">MS in Information Science and Technology</span><span class="lang-jp">修士（情報科学）</span></h3>
+                        <p><span class="lang-en"><strong>Osaka University</strong> / 2017-2019</span><span class="lang-jp"><strong>大阪大学</strong> / 2017-2019</span></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="content">
-                        <h3>BE in Informatics</h3>
-                        <p><strong>Kyoto University</strong> / 2012-2016</p>
+                        <h3><span class="lang-en">BE in Informatics</span><span class="lang-jp">工学部 情報学科</span></h3>
+                        <p><span class="lang-en"><strong>Kyoto University</strong> / 2012-2016</span><span class="lang-jp"><strong>京都大学</strong> / 2012-2016</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title"><span class="lang-en">Technical Skills</span><span class="lang-jp">技術スキル</span></h2>
             <div class="skills-wrapper">
                 <span class="skill-tag">Python (PyTorch, sklearn, NumPy)</span>
                 <span class="skill-tag">LLMs (RAG, Agents)</span>
@@ -361,40 +406,7 @@
     </main>
 </div>
 
-<script>
-    // --- Last Modified Date Script ---
-    (function() {
-        const lastModifiedElement = document.getElementById('last-modified');
-        if (lastModifiedElement) {
-        const lastModifiedDate = new Date(document.lastModified);
-        const year = lastModifiedDate.getFullYear();
-        const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
-        const day = String(lastModifiedDate.getDate()).padStart(2, '0');
-        const formattedDate = `${year}/${month}/${day}`;
-        lastModifiedElement.textContent += formattedDate;
-        }
-    })();
-
-    // --- Mobile Menu Toggle ---
-    (function() {
-        const toggleBtn = document.querySelector('.mobile-menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        
-        if(toggleBtn){
-            toggleBtn.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-            });
-        }
-        
-        // Close sidebar when clicking a link (on mobile)
-        const navLinks = document.querySelectorAll('.sidebar-nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-            });
-        });
-    })();
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
