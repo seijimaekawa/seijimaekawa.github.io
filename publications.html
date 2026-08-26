@@ -1,77 +1,99 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Seiji MAEKAWA</title>
-    <!-- Elegant Serif for Headlines, Clean Sans for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="Publications by Seiji Maekawa on language models, retrieval, long-context reasoning, graph machine learning, and network analysis.">
+    <meta name="theme-color" content="#f6f3ec">
+    <link rel="canonical" href="https://seijimaekawa.github.io/publications.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Publications — Seiji Maekawa">
+    <meta property="og:description" content="Research publications on language models, retrieval, long-context reasoning, and graph machine learning.">
+    <meta property="og:url" content="https://seijimaekawa.github.io/publications.html">
+    <meta property="og:image" content="https://seijimaekawa.github.io/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:image:alt" content="Seiji Maekawa — Research on reliable language-model systems.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://seijimaekawa.github.io/og.png">
+    <title>Publications — Seiji Maekawa</title>
+    <script>
+        try {
+            const preferredLanguage = window.localStorage.getItem('preferred-language');
+            if (preferredLanguage === 'en' || preferredLanguage === 'ja') {
+                document.documentElement.lang = preferredLanguage;
+            }
+        } catch {
+            // English remains the default when storage is unavailable.
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Noto+Sans+JP:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css?v=20260726" rel="stylesheet">
 </head>
 <body>
 
-<div class="layout-wrapper">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-sticky">
-            <div class="profile-header">
-                <a href="index.html">
-                    <img class="profile-picture" src="seiji_hp_wide.jpg" alt="Seiji Maekawa"/>
-                </a>
-                <h1 class="about-name"><a href="index.html" style="color: inherit;">Seiji MAEKAWA</a> <br> <span class="jp-name">(前川 政司)</span></h1>
-                <p class="current-position">
-                    Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>
-                    Mountain View, CA
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
-                   seiji [at] megagon.ai
-                </div>
-            </div>
+<a class="skip-link" href="#main-content">
+    <span class="lang-en">Skip to content</span>
+    <span class="lang-jp">本文へ移動</span>
+</a>
 
-            <nav class="sidebar-nav">
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#research">Research</a></li>
-                    <li><a href="index.html#experiences">Experiences</a></li>
-                    <li><a href="publications.html" style="opacity: 1; font-weight: 700;">Publications</a></li>
-                    <li><a href="index.html#awards">Awards</a></li>
-                    <li><a href="index.html#education">Education</a></li>
-                    <li><a href="index.html#skills">Skills</a></li>
-                </ul>
-            </nav>
+<header class="site-header">
+    <div class="frame site-header-inner">
+        <a class="wordmark" href="index.html" aria-label="Seiji Maekawa, home">
+            <span>Seiji Maekawa</span>
+            <span class="wordmark-jp" lang="ja">前川 政司</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+            <span class="lang-en">Menu</span>
+            <span class="lang-jp">メニュー</span>
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+            <a href="index.html#research"><span class="lang-en">Research</span><span class="lang-jp">研究</span></a>
+            <a href="index.html#experiences"><span class="lang-en">Experience</span><span class="lang-jp">経歴</span></a>
+            <a href="publications.html" aria-current="page"><span class="lang-en">Publications</span><span class="lang-jp">業績</span></a>
+            <a href="index.html#awards"><span class="lang-en">Recognition</span><span class="lang-jp">受賞・活動</span></a>
+            <button id="lang-switch" type="button" aria-label="Switch to Japanese">日本語</button>
+        </nav>
+    </div>
+</header>
 
-            <footer class="sidebar-footer">
-                <p>© 2025 Seiji Maekawa.</p>
-                <p><a href="index.html">Back to Home</a></p>
-            </footer>
-        </div>
-    </aside>
-
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-        <div class="container">
-            <a class="mobile-brand" href="index.html">S. Maekawa</a>
-            <button class="mobile-menu-toggle" aria-label="Open Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+<main id="main-content" class="frame publication-main">
+    <header class="publication-hero">
+        <p class="eyebrow">
+            <span class="lang-en">Research archive</span>
+            <span class="lang-jp">研究業績</span>
+        </p>
+        <h1>
+            <span class="lang-en">Publications</span>
+            <span class="lang-jp">発表論文</span>
+        </h1>
+        <p class="publication-intro">
+            <span class="lang-en">Publications on language models, retrieval, long-context reasoning, graph machine learning, and network analysis.</span>
+            <span class="lang-jp">言語モデル、検索、長文脈推論、グラフ機械学習、ネットワーク分析に関する研究業績です。</span>
+        </p>
+        <div class="hero-links" aria-label="Publication profile links">
+            <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ">Google Scholar</a>
+            <a href="https://github.com/seijimaekawa">GitHub</a>
+            <a href="index.html"><span class="lang-en">About Seiji</span><span class="lang-jp">プロフィール</span></a>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-        
-        <section id="publications-full">
-            <h2 class="section-title">Full Publication List</h2>
+    <section id="publications-full" class="publication-archive">
+            <p class="section-kicker">
+                <span class="lang-en">Complete list</span>
+                <span class="lang-jp">全発表論文</span>
+            </p>
+            <h2 class="section-title">
+                <span class="lang-en">All Publications</span>
+                <span class="lang-jp">全発表論文</span>
+            </h2>
 
             <div class="pub-category">
-                <h3>Preprint</h3>
-                <div class="publication-list">        
+                <h3><span class="lang-en">International Conferences &amp; Workshops</span><span class="lang-jp">国際会議・ワークショップ</span></h3>
+                <div class="publication-list">
                     <div class="publication-item">
                         <div class="pub-title">Align Then Adapt: Label-Efficient Adapter Learning for Asymmetric Dense Retrieval</div>
                         <div class="pub-authors"><u>Seiji Maekawa</u>, Moin Aminnaseri, Pouya Pezeshkpour, Estevam Hruschka</div>
@@ -81,39 +103,6 @@
                             <a href="https://github.com/megagonlabs/ERA" class="btn-sm">Code</a>
                         </div>
                     </div>
-                    <div class="publication-item">
-                        <div class="pub-title">OmniTQA: A Cost-Aware System for Hybrid Query Processing over Semi-Structured Data</div>
-                        <div class="pub-authors">Nima Shahbazi, <u>Seiji Maekawa</u>, Nikita Bhutani, Estevam Hruschka</div>
-                        <div class="pub-venue">arXiv preprint, Apr. 2026</div>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2604.02444" class="btn-sm">Paper</a>
-                            <a href="https://github.com/megagonlabs/OmniTQA" class="btn-sm">Code</a>
-                        </div>
-                    </div>
-                    <div class="publication-item">
-                        <div class="pub-title">The Rarity Blind Spot: A Framework for Evaluating Statistical Reasoning in LLMs</div>
-                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Nikita Bhutani</div>
-                        <div class="pub-venue">arXiv preprint, Aug. 2025</div>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2509.00245" class="btn-sm">Paper</a>
-                            <a href="https://github.com/megagonlabs/DiFBench" class="btn-sm">Code</a>
-                        </div>
-                    </div>
-                    <div class="publication-item">
-                        <div class="pub-title">A Simple and Scalable Graph Neural Network for Large Directed Graphs</div>
-                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka</div>
-                        <div class="pub-venue">arXiv preprint, June 2023</div>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2306.08274" class="btn-sm">Paper</a>
-                            <a href="https://github.com/seijimaekawa/A2DUG" class="btn-sm">Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pub-category">
-                <h3>International Conferences & Workshops</h3>
-                   <div class="publication-list">
                     <div class="publication-item">
                         <div class="pub-title">Towards Reliable Benchmarking: A Contamination Free, Controllable Evaluation Framework for Multi-step LLM Function Calling</div>
                         <div class="pub-authors"><u>Seiji Maekawa</u>, Jackson Hassell, Pouya Pezeshkpour, Tom Mitchell, Estevam Hruschka</div>
@@ -169,7 +158,7 @@
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2402.13492" class="btn-sm">Paper</a>
                             <a href="https://github.com/megagonlabs/witqa" class="btn-sm">Code</a>
-                            <a href="https://github.com/seijimaekawa/seijimaekawa.github.io/blob/test/files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
+                            <a href="files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
                         </div>
                     </div>
 
@@ -186,7 +175,7 @@
                     <div class="publication-item">
                         <div class="pub-title">Beyond Real-world Benchmark Datasets: An Empirical Study of Node Classification with GNNs</div>
                         <div class="pub-authors"><u>Seiji Maekawa</u>, Koki Noda, Yuya Sasaki, Makoto Onizuka</div>
-                        <div class="pub-venue">NeurIPS 2022 (Datasets & Benchmarks)</div>
+                        <div class="pub-venue">NeurIPS 2022 (Datasets &amp; Benchmarks)</div>
                         <div class="pub-links">
                             <a href="https://openreview.net/forum?id=bSULxOy3On" class="btn-sm">Paper</a>
                             <a href="https://github.com/seijimaekawa/empirical-study-of-GNNs" class="btn-sm">Code</a>
@@ -254,7 +243,7 @@
             </div>
 
             <div class="pub-category">
-                <h3>Journal Papers</h3>
+                <h3><span class="lang-en">Journal Articles</span><span class="lang-jp">ジャーナル論文</span></h3>
                  <div class="publication-list">
                     <div class="publication-item">
                         <div class="pub-title">GenCAT: Generating Attributed Graphs with Controlled Relationships between Classes, Attributes, and Topology</div>
@@ -276,9 +265,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="pub-category">
+                <h3><span class="lang-en">Preprints</span><span class="lang-jp">プレプリント</span></h3>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <div class="pub-title">OmniTQA: A Cost-Aware System for Hybrid Query Processing over Semi-Structured Data</div>
+                        <div class="pub-authors">Nima Shahbazi, <u>Seiji Maekawa</u>, Nikita Bhutani, Estevam Hruschka</div>
+                        <div class="pub-venue">arXiv preprint, Apr. 2026</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2604.02444" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/OmniTQA" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">The Rarity Blind Spot: A Framework for Evaluating Statistical Reasoning in LLMs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Hayate Iso, Nikita Bhutani</div>
+                        <div class="pub-venue">arXiv preprint, Aug. 2025</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2509.00245" class="btn-sm">Paper</a>
+                            <a href="https://github.com/megagonlabs/DiFBench" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-title">A Simple and Scalable Graph Neural Network for Large Directed Graphs</div>
+                        <div class="pub-authors"><u>Seiji Maekawa</u>, Yuya Sasaki, Makoto Onizuka</div>
+                        <div class="pub-venue">arXiv preprint, June 2023</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2306.08274" class="btn-sm">Paper</a>
+                            <a href="https://github.com/seijimaekawa/A2DUG" class="btn-sm">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="pub-category">
-                <h3>Domestic Conferences/Others</h3>
+                <h3><span class="lang-en">Japanese Conferences &amp; Other Publications</span><span class="lang-jp">国内会議・その他</span></h3>
                 <div class="publication-list">
                      <div class="publication-item">
                         <div class="pub-title">多様な人工グラフを用いた GNN によるノード分類の実証研究</div>
@@ -360,31 +382,35 @@
                 </div>
             </div>
 
-        </section>
+    </section>
+</main>
 
-    </main>
-</div>
+<footer class="site-footer">
+    <div class="frame site-footer-inner">
+        <div>
+            <p class="footer-name">Seiji Maekawa</p>
+            <p>
+                <span class="lang-en">Senior Research Scientist · California</span>
+                <span class="lang-jp">シニアリサーチサイエンティスト · カリフォルニア</span>
+            </p>
+        </div>
+        <address class="footer-contact">
+            <a href="mailto:seiji@megagon.ai">seiji [at] megagon.ai</a>
+            <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ">Google Scholar</a>
+            <a href="https://github.com/seijimaekawa">GitHub</a>
+            <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/">LinkedIn</a>
+        </address>
+        <div class="footer-meta">
+            <p>© 2026 Seiji Maekawa</p>
+            <p id="last-modified">
+                <span class="lang-en">Last modified: </span>
+                <span class="lang-jp">最終更新: </span>
+            </p>
+        </div>
+    </div>
+</footer>
 
-<script>
-    // --- Mobile Menu Toggle ---
-    (function() {
-        const toggleBtn = document.querySelector('.mobile-menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        
-        if(toggleBtn){
-            toggleBtn.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-            });
-        }
-        
-        const navLinks = document.querySelectorAll('.sidebar-nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-            });
-        });
-    })();
-</script>
+<script src="js/main.js?v=20260726"></script>
 
 </body>
 </html>

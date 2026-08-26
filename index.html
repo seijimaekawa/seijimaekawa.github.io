@@ -3,138 +3,181 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seiji MAEKAWA - Senior Research Scientist</title>
-    <!-- Elegant Serif for Headlines, Clean Sans for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="Seiji Maekawa is a Senior Research Scientist at Megagon Labs working on reliable language-model systems, retrieval, tool use, and long-context reasoning.">
+    <meta name="theme-color" content="#f6f3ec">
+    <link rel="canonical" href="https://seijimaekawa.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Seiji Maekawa — Senior Research Scientist">
+    <meta property="og:description" content="Research on reliable language-model systems, retrieval, tool use, and long-context reasoning.">
+    <meta property="og:url" content="https://seijimaekawa.github.io/">
+    <meta property="og:image" content="https://seijimaekawa.github.io/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:image:alt" content="Seiji Maekawa — Research on reliable language-model systems.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://seijimaekawa.github.io/og.png">
+    <title>Seiji Maekawa — Senior Research Scientist</title>
+    <script>
+        try {
+            const preferredLanguage = window.localStorage.getItem('preferred-language');
+            if (preferredLanguage === 'en' || preferredLanguage === 'ja') {
+                document.documentElement.lang = preferredLanguage;
+            }
+        } catch {
+            // English remains the default when storage is unavailable.
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Noto+Sans+JP:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css?v=20260726" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Seiji Maekawa",
+      "alternateName": "前川 政司",
+      "url": "https://seijimaekawa.github.io/",
+      "image": "https://seijimaekawa.github.io/seiji_hp_wide.jpg",
+      "jobTitle": "Senior Research Scientist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Megagon Labs",
+        "url": "https://megagon.ai/"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Osaka University"
+      },
+      "sameAs": [
+        "https://github.com/seijimaekawa",
+        "https://scholar.google.com/citations?user=O2HlSxwAAAAJ",
+        "https://www.linkedin.com/in/seiji-maekawa-04952b1b4/"
+      ]
+    }
+    </script>
 </head>
 <body>
 
-<div class="layout-wrapper">
-    <!-- Sidebar / Hero Area Combined -->
-    <aside class="sidebar">
-        <div class="sidebar-sticky">
-            <div class="profile-header">
-                <img class="profile-picture" src="seiji_hp_wide.jpg" alt="Seiji Maekawa"/>
-                <h1 class="about-name">Seiji MAEKAWA <br> <span class="jp-name">(前川 政司)</span></h1>
-                <p class="current-position">
-                    <span class="lang-en">Senior Research Scientist @ <a href="https://megagon.ai/" target="_blank">Megagon Labs</a><br>Mountain View, CA</span>
-                    <span class="lang-jp">Megagon Labs シニアリサーチサイエンティスト<br>（カリフォルニア州 マウンテンビュー）</span>
+<a class="skip-link" href="#main-content">
+    <span class="lang-en">Skip to content</span>
+    <span class="lang-jp">本文へ移動</span>
+</a>
+
+<header class="site-header">
+    <div class="frame site-header-inner">
+        <a class="wordmark" href="index.html" aria-label="Seiji Maekawa, home">
+            <span>Seiji Maekawa</span>
+            <span class="wordmark-jp" lang="ja">前川 政司</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+            <span class="lang-en">Menu</span>
+            <span class="lang-jp">メニュー</span>
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+            <a href="#research"><span class="lang-en">Research</span><span class="lang-jp">研究</span></a>
+            <a href="#experiences"><span class="lang-en">Experience</span><span class="lang-jp">経歴</span></a>
+            <a href="publications.html"><span class="lang-en">Publications</span><span class="lang-jp">業績</span></a>
+            <a href="#awards"><span class="lang-en">Recognition</span><span class="lang-jp">受賞・活動</span></a>
+            <a href="files/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+            <button id="lang-switch" type="button" aria-label="Switch to Japanese">日本語</button>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+    <section id="about" class="frame hero">
+        <div class="hero-copy">
+            <p class="eyebrow">
+                <span class="lang-en">Senior Research Scientist · Megagon Labs</span>
+                <span class="lang-jp">Megagon Labs · シニアリサーチサイエンティスト</span>
+            </p>
+            <div class="lang-en hero-intro">
+                <p>
+                    I am a Senior Research Scientist at <a href="https://megagon.ai/" target="_blank" rel="noopener noreferrer">Megagon Labs</a> in Mountain View, California. I hold a Ph.D. in Information Science and Technology from Osaka University.
                 </p>
-                <div class="social-links">
-                    <a href="https://github.com/seijimaekawa" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <!-- <a href="mailto:seiji@megagon.ai" aria-label="Email"><i class="fas fa-envelope"></i></a> -->
-                </div>
-                <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
-                   seiji [at] megagon.ai
-                </div>
+                <p>
+                    My research focuses on large language models, retrieval-augmented generation, and long-context reasoning, with an emphasis on function calling, retrieval, and reliable evaluation.
+                </p>
             </div>
-
-            <button id="lang-switch" aria-label="Switch to Japanese">日本語</button>
-            <nav class="sidebar-nav">
-                <ul> <!-- Removed href='#' to avoid jump to top, smooth scroll handled by css -->
-                    <li><a href="index.html#about"><span class="lang-en">About</span><span class="lang-jp">自己紹介</span></a></li>
-                    <li><a href="index.html#research"><span class="lang-en">Research</span><span class="lang-jp">研究分野</span></a></li>
-                    <li><a href="index.html#experiences"><span class="lang-en">Experiences</span><span class="lang-jp">経歴</span></a></li>
-                    <li><a href="publications.html"><span class="lang-en">Publications</span><span class="lang-jp">業績</span></a></li>
-                    <li><a href="index.html#awards"><span class="lang-en">Awards</span><span class="lang-jp">受賞歴</span></a></li>
-                    <li><a href="index.html#education"><span class="lang-en">Education</span><span class="lang-jp">学歴</span></a></li>
-                </ul>
-            </nav>
-
-            <footer class="sidebar-footer">
-                <p>© 2025 Seiji Maekawa.</p>
-                <p id="last-modified" class="last-mod">
-                    <span class="lang-en">Last modified: </span>
-                    <span class="lang-jp">最終更新: </span>
+            <div class="lang-jp hero-intro">
+                <p>
+                    私は米国カリフォルニア州マウンテンビューの<a href="https://megagon.ai/" target="_blank" rel="noopener noreferrer">Megagon Labs</a>でシニアリサーチサイエンティストを務めています。2023年に大阪大学で博士号（情報科学）を取得しました。
                 </p>
-            </footer>
+                <p>
+                    大規模言語モデル、検索拡張生成、長文脈推論を中心に、関数呼出、検索、信頼性の高い評価について研究しています。
+                </p>
+            </div>
+            <div class="hero-links" aria-label="Profile links">
+                <a href="#publications"><span class="lang-en">Selected research</span><span class="lang-jp">主な研究</span></a>
+                <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ">Google Scholar</a>
+                <a href="https://github.com/seijimaekawa">GitHub</a>
+                <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/">LinkedIn</a>
+                <a href="files/cv.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+            </div>
         </div>
-    </aside>
+        <figure class="hero-portrait">
+            <img src="seiji_hp_wide-800.jpg" alt="Portrait of Seiji Maekawa" width="800" height="628" fetchpriority="high">
+        </figure>
+    </section>
 
-    <!-- Mobile Header (Visible only on small screens) -->
-    <header class="mobile-header">
-        <div class="container">
-            <a class="mobile-brand" href="#">S. Maekawa</a>
-            <button class="mobile-menu-toggle" aria-label="Open Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="main-content">
-        
-        <section id="about" class="intro-section">
-            <h2 class="section-title"><span class="lang-en">About Me</span><span class="lang-jp">自己紹介</span></h2>
-            <div class="lang-en">
-                <p class="intro-text">
-                    I am a Researcher at <strong>Megagon Labs</strong> in Mountain View, California. 
-                    I hold a Ph.D. in Information Science and Technology from Osaka University.
-                    My research passion lies at the intersection of <strong>Large Language Models</strong> (LLMs), <strong>Retrieval-Augmented Generation</strong> (RAG), and <strong>Long-Context Reasoning</strong>.
-                </p>
-                <p class="intro-text">
-                    Currently, I am focusing on making Large Language Models (LLMs) more reliable and capable through function calling, retrieval augmentation, and long-context understanding.
-                </p>
-            </div>
-            <div class="lang-jp">
-                <p class="intro-text">
-                    私はMegagon Labs（米国カリフォルニア州マウンテンビュー）のリサーチサイエンティストです。    
-                    2023年に大阪大学にて博士号（情報科学）を取得し、その後から現職。
-                    <strong>大規模言語モデル</strong> (LLM)、<strong>検索拡張生成</strong> (RAG)、<strong>長文脈推論</strong>の交差点に研究の情熱を注いでいます。
-                </p>
-                <p class="intro-text">
-                    現在は、関数呼出、検索拡張 (RAG)、長文脈理解を通じて、大規模言語モデル (LLM) をより信頼性が高く、有能なものにすることに注力しています。
-                </p>
-            </div>
-        </section>
+    <div class="frame page-sections">
 
         <section id="research">
-            <h2 class="section-title"><span class="lang-en">Research Interests</span><span class="lang-jp">研究分野</span></h2>
+            <p class="section-kicker"><span class="lang-en">Current research and Ph.D. foundations</span><span class="lang-jp">現在の研究と博士課程での研究基盤</span></p>
+            <h2 class="section-title"><span class="lang-en">Research Focus</span><span class="lang-jp">研究分野</span></h2>
             <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="card-icon"><i class="fas fa-brain"></i></div>
-                    <h3><span class="lang-en">NLP & LLMs</span><span class="lang-jp">自然言語処理 & LLM</span></h3>
-                    <ul>
-                        <li><span class="lang-en">Function Calling & Tool Use</span><span class="lang-jp">関数呼出とツール利用</span></li>
-                        <li><span class="lang-en">Long-context Understanding</span><span class="lang-jp">長文脈理解</span></li>
-                        <li><span class="lang-en">Retrieval-Augmented Generation (RAG)</span><span class="lang-jp">検索拡張生成 (RAG)</span></li>
-                        <li><span class="lang-en">Active Learning</span><span class="lang-jp">能動学習</span></li>
-                    </ul>
+                <div class="interest-card focus-card">
+                    <span class="interest-number" aria-hidden="true">01</span>
+                    <div class="focus-content">
+                        <p class="focus-context"><span class="lang-en">Current research</span><span class="lang-jp">現在の研究</span></p>
+                        <h3><span class="lang-en">Function Calling &amp; Tool Use</span><span class="lang-jp">関数呼出・ツール利用</span></h3>
+                        <p>
+                            <span class="lang-en">Developing LLM systems that reliably select, call, and coordinate external tools for complex tasks.</span>
+                            <span class="lang-jp">複雑なタスクに対して外部ツールを適切に選択・呼出・連携できる、信頼性の高いLLMシステムを研究しています。</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="interest-card">
-                    <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3><span class="lang-en">Graph Processing</span><span class="lang-jp">グラフ処理</span></h3>
-                    <ul>
-                        <li><span class="lang-en">Graph Neural Networks (GNNs)</span><span class="lang-jp">グラフニューラルネットワーク (GNN)</span></li>
-                        <li><span class="lang-en">Synthetic Graph Generation</span><span class="lang-jp">合成グラフ生成</span></li>
-                        <li><span class="lang-en">Attributed Graph Clustering</span><span class="lang-jp">属性付きグラフクラスタリング</span></li>
-                    </ul>
+                <div class="interest-card focus-card">
+                    <span class="interest-number" aria-hidden="true">02</span>
+                    <div class="focus-content">
+                        <p class="focus-context"><span class="lang-en">Current research</span><span class="lang-jp">現在の研究</span></p>
+                        <h3><span class="lang-en">Long-context Understanding</span><span class="lang-jp">長文脈理解</span></h3>
+                        <p>
+                            <span class="lang-en">Studying how language models find, connect, and reason over relevant evidence in long inputs.</span>
+                            <span class="lang-jp">長い入力から関連情報を見つけ、結びつけ、根拠に基づいて推論する言語モデルの能力を研究しています。</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="interest-card">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h3><span class="lang-en">Social Network Analysis</span><span class="lang-jp">ソーシャルネットワーク分析</span></h3>
-                    <ul>
-                        <li><span class="lang-en">Follower Prediction / Link Prediction</span><span class="lang-jp">フォロワー予測 / リンク予測</span></li>
-                        <li><span class="lang-en">Analysis on Incomplete Networks</span><span class="lang-jp">不完全ネットワークの分析</span></li>
-                    </ul>
+                <div class="interest-card focus-card">
+                    <span class="interest-number" aria-hidden="true">03</span>
+                    <div class="focus-content">
+                        <p class="focus-context"><span class="lang-en">Current research</span><span class="lang-jp">現在の研究</span></p>
+                        <h3><span class="lang-en">Retrieval-Augmented Generation</span><span class="lang-jp">検索拡張生成</span></h3>
+                        <p>
+                            <span class="lang-en">Improving retrieval and grounded generation to produce more accurate and verifiable responses.</span>
+                            <span class="lang-jp">より正確で検証可能な応答を生成するため、検索と根拠に基づく生成の改善に取り組んでいます。</span>
+                        </p>
+                    </div>
                 </div>
-                 <div class="interest-card">
-                    <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <h3><span class="lang-en">Graph Database</span><span class="lang-jp">グラフデータベース</span></h3>
-                    <ul>
-                        <li><span class="lang-en">Language-aware Indexing</span><span class="lang-jp">言語認識インデックス</span></li>
-                        <li><span class="lang-en">Query Languages</span><span class="lang-jp">クエリ言語</span></li>
-                    </ul>
+                <div class="interest-card focus-card">
+                    <span class="interest-number" aria-hidden="true">04</span>
+                    <div class="focus-content">
+                        <p class="focus-context"><span class="lang-en">Ph.D. research</span><span class="lang-jp">博士課程での研究</span></p>
+                        <h3><span class="lang-en">Graph &amp; Network Research</span><span class="lang-jp">グラフ・ネットワーク研究</span></h3>
+                        <p>
+                            <span class="lang-en">During my Ph.D., I worked on graph machine learning, social network analysis, and graph data management, including GNNs, link prediction, graph generation and clustering, indexing, and query languages.</span>
+                            <span class="lang-jp">博士課程では、GNN、リンク予測、グラフ生成・クラスタリング、インデックス・クエリ言語を含む、グラフ機械学習、ソーシャルネットワーク分析、グラフデータ管理を研究しました。</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experiences">
-            <h2 class="section-title"><span class="lang-en">Experiences</span><span class="lang-jp">経歴</span></h2>
+            <p class="section-kicker"><span class="lang-en">Professional background</span><span class="lang-jp">職歴</span></p>
+            <h2 class="section-title"><span class="lang-en">Experience</span><span class="lang-jp">経歴</span></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="date">2023.04 - Present</span>
@@ -204,12 +247,15 @@
         </section>
 
         <section id="publications">
-            <h2 class="section-title"><span class="lang-en">Selected Publications</span><span class="lang-jp">主な発表論文</span></h2>
-            <div style="margin-bottom: 2rem;">
-            <a href="publications.html" style="font-weight: 700; text-decoration: underline;">
-                <span class="lang-en">View Full Publication List &rarr;</span>
-                <span class="lang-jp">全発表論文リストを見る &rarr;</span>
-            </a>
+            <div class="section-heading-row">
+                <div>
+                    <p class="section-kicker"><span class="lang-en">Recent and representative work</span><span class="lang-jp">最近および代表的な研究</span></p>
+                    <h2 class="section-title"><span class="lang-en">Selected Publications</span><span class="lang-jp">主な発表論文</span></h2>
+                </div>
+                <a class="section-link" href="publications.html">
+                    <span class="lang-en">View all publications</span>
+                    <span class="lang-jp">全発表論文を見る</span>
+                </a>
             </div>
 
             <div class="pub-category">
@@ -282,7 +328,7 @@
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2402.13492" class="btn-sm">Paper</a>
                             <a href="https://github.com/megagonlabs/witqa" class="btn-sm">Code</a>
-                            <a href="https://github.com/seijimaekawa/seijimaekawa.github.io/blob/test/files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
+                            <a href="files/WiTQA_poster.pdf" class="btn-sm">Poster</a>
                         </div>
                     </div>
 
@@ -299,10 +345,11 @@
                     <div class="publication-item">
                         <div class="pub-title">Beyond Real-world Benchmark Datasets: An Empirical Study of Node Classification with GNNs</div>
                         <div class="pub-authors"><u>Seiji Maekawa</u>, Koki Noda, Yuya Sasaki, Makoto Onizuka</div>
-                        <div class="pub-venue">NeurIPS 2022 (Datasets & Benchmarks)</div>
+                        <div class="pub-venue">NeurIPS 2022 (Datasets &amp; Benchmarks)</div>
                         <div class="pub-links">
                             <a href="https://openreview.net/forum?id=bSULxOy3On" class="btn-sm">Paper</a>
                             <a href="https://github.com/seijimaekawa/empirical-study-of-GNNs" class="btn-sm">Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,7 +357,8 @@
         </section>
 
         <section id="awards">
-            <h2 class="section-title"><span class="lang-en">Awards & Activities</span><span class="lang-jp">受賞歴 & 活動</span></h2>
+            <p class="section-kicker"><span class="lang-en">Recognition and service</span><span class="lang-jp">受賞および学術活動</span></p>
+            <h2 class="section-title"><span class="lang-en">Recognition &amp; Service</span><span class="lang-jp">受賞歴 &amp; 活動</span></h2>
             <div class="grid-2-col">
                 <div class="interest-card simple-card">
                     <h3><span class="lang-en">Awards</span><span class="lang-jp">受賞歴</span></h3>
@@ -343,20 +391,21 @@
             </div>
             
             <div class="service-section">
-                <div class="interest-card simple-card" style="width: 100%;">
-                    <h3><span class="lang-en">Program Committee</span><span class="lang-jp">査読経験</span></h3>
+                <div class="interest-card simple-card">
+                    <h3><span class="lang-en">Professional Service</span><span class="lang-jp">査読経験</span></h3>
                     <ul class="styled-list">
-                        <li>2026: ICLR, KDD D&B, COLM, ARR May, VLDB DashSys Workshop </li>
-                        <li>2025: ICLR, ARR May & July</li>
-                        <li>2024: ARR April & October, ECML PKDD AI4HR & PES Workshop, EACL NLP4HR Workshop, SDM, TKDE</li>
+                        <li>2026: ICLR, KDD D&amp;B, COLM, ARR May, VLDB DashSys Workshop</li>
+                        <li>2025: ICLR, ARR May &amp; July</li>
+                        <li>2024: ARR April &amp; October, ECML PKDD AI4HR &amp; PES Workshop, EACL NLP4HR Workshop, SDM, TKDE</li>
                         <li>2023: IEEE BigData, CIKM, ACL Matching Workshop, KDD</li>
-                        <li>2022: NeurIPS D&B, ECML PKDD</li>
+                        <li>2022: NeurIPS D&amp;B, ECML PKDD</li>
                     </ul>
                 </div>
             </div>
         </section>
         
         <section id="education">
+          <p class="section-kicker"><span class="lang-en">Academic background</span><span class="lang-jp">学歴</span></p>
           <h2 class="section-title"><span class="lang-en">Education</span><span class="lang-jp">学歴</span></h2>
             <div class="timeline no-line">
                 <div class="timeline-item">
@@ -380,10 +429,35 @@
             </div>
         </section>
 
-    </main>
-</div>
+    </div>
+</main>
 
-<script src="js/main.js"></script>
+<footer class="site-footer">
+    <div class="frame site-footer-inner">
+        <div>
+            <p class="footer-name">Seiji Maekawa</p>
+            <p>
+                <span class="lang-en">Senior Research Scientist · California</span>
+                <span class="lang-jp">シニアリサーチサイエンティスト · カリフォルニア</span>
+            </p>
+        </div>
+        <address class="footer-contact">
+            <a href="mailto:seiji@megagon.ai">seiji [at] megagon.ai</a>
+            <a href="https://scholar.google.com/citations?user=O2HlSxwAAAAJ">Google Scholar</a>
+            <a href="https://github.com/seijimaekawa">GitHub</a>
+            <a href="https://www.linkedin.com/in/seiji-maekawa-04952b1b4/">LinkedIn</a>
+        </address>
+        <div class="footer-meta">
+            <p>© 2026 Seiji Maekawa</p>
+            <p id="last-modified">
+                <span class="lang-en">Last modified: </span>
+                <span class="lang-jp">最終更新: </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js?v=20260726"></script>
 
 </body>
 </html>

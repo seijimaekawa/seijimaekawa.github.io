@@ -1,57 +1,93 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const langSwitch = document.getElementById('lang-switch');
     const html = document.documentElement;
+    const langSwitch = document.getElementById('lang-switch');
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNavigation = document.getElementById('site-navigation');
+    const mobileNavigation = window.matchMedia('(max-width: 740px)');
+    const lastModifiedElement = document.getElementById('last-modified');
 
-    // Default to English if no lang attribute or already present (handled by HTML)
-    if (!html.getAttribute('lang')) {
-        html.setAttribute('lang', 'en');
+    const updateLastModified = (language) => {
+        if (!lastModifiedElement) {
+            return;
+        }
+
+        let dateSpan = lastModifiedElement.querySelector('.last-modified-date');
+        if (!dateSpan) {
+            dateSpan = document.createElement('span');
+            dateSpan.className = 'last-modified-date';
+            lastModifiedElement.appendChild(dateSpan);
+        }
+
+        dateSpan.textContent = new Intl.DateTimeFormat(
+            language === 'ja' ? 'ja-JP' : 'en-CA',
+            { year: 'numeric', month: '2-digit', day: '2-digit' }
+        ).format(new Date(document.lastModified));
+    };
+
+    const setNavigationOpen = (isOpen) => {
+        if (!navToggle || !siteNavigation) {
+            return;
+        }
+
+        const shouldOpen = mobileNavigation.matches && isOpen;
+        navToggle.setAttribute('aria-expanded', String(shouldOpen));
+        siteNavigation.hidden = mobileNavigation.matches && !shouldOpen;
+    };
+
+    const syncNavigation = () => {
+        setNavigationOpen(false);
+    };
+
+    syncNavigation();
+
+    if (navToggle && siteNavigation) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            setNavigationOpen(!isOpen);
+        });
+
+        siteNavigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setNavigationOpen(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+                setNavigationOpen(false);
+                navToggle.focus();
+            }
+        });
+
+        mobileNavigation.addEventListener('change', syncNavigation);
     }
+
+    const setLanguage = (language) => {
+        const nextLanguage = language === 'ja' ? 'ja' : 'en';
+        html.setAttribute('lang', nextLanguage);
+        updateLastModified(nextLanguage);
+
+        if (langSwitch) {
+            const switchingToJapanese = nextLanguage === 'en';
+            langSwitch.textContent = switchingToJapanese ? '日本語' : 'English';
+            langSwitch.setAttribute(
+                'aria-label',
+                switchingToJapanese ? 'Switch to Japanese' : 'Switch to English'
+            );
+        }
+    };
+
+    setLanguage(html.getAttribute('lang'));
 
     if (langSwitch) {
         langSwitch.addEventListener('click', () => {
-            const currentLang = html.getAttribute('lang');
-            const newLang = currentLang === 'en' ? 'ja' : 'en';
-            html.setAttribute('lang', newLang);
-            
-            // Switch button text based on new language state
-            if (newLang === 'ja') {
-                langSwitch.textContent = 'English';
-                langSwitch.setAttribute('aria-label', 'Switch to English');
-            } else {
-                langSwitch.textContent = '日本語';
-                langSwitch.setAttribute('aria-label', 'Switch to Japanese');
+            const nextLanguage = html.getAttribute('lang') === 'en' ? 'ja' : 'en';
+            setLanguage(nextLanguage);
+
+            try {
+                window.localStorage.setItem('preferred-language', nextLanguage);
+            } catch {
+                // The language switch still works when storage is unavailable.
             }
         });
     }
 
-    // --- Last Modified Date Script (moved from index.html) ---
-    const lastModifiedElement = document.getElementById('last-modified');
-    if (lastModifiedElement) {
-        const lastModifiedDate = new Date(document.lastModified);
-        const year = lastModifiedDate.getFullYear();
-        const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0');
-        const day = String(lastModifiedDate.getDate()).padStart(2, '0');
-        const formattedDate = `${year}/${month}/${day}`;
-        const dateSpan = document.createElement('span');
-        dateSpan.textContent = formattedDate;
-        lastModifiedElement.appendChild(dateSpan);
-    }
-
-    // --- Mobile Menu Toggle (moved from index.html) ---
-    const toggleBtn = document.querySelector('.mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    
-    if(toggleBtn){
-        toggleBtn.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-        });
-    }
-    
-    // Close sidebar when clicking a link (on mobile)
-    const navLinks = document.querySelectorAll('.sidebar-nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            sidebar.classList.remove('active');
-        });
-    });
 });
